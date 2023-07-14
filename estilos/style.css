@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Reset */
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --pr-bg1: #212121;
+    --pr-bg2: #383235;
+    --sc-bg: #111111;
+    --hl-color1: #4EA5D9;
+    --hl-color2: #4BA3C3;
+    --hl-color3: #00C2D1;
+    --text-color1: #f4f4f4;
+}
+
+/* General */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    position: relative;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+img {
+    border: 1px solid red;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.container {
+    border: 1px solid red;
+    width: 100vw;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+/*  Header */
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 1.8rem 0 1.25;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+}
+
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    width: 7rem;
+}
+
+header nav a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    color: var(--text-color1);
+    margin: 0 2vw;
+    padding: 0 1.5vw .5vw;
+    position: relative;
+}
+
+header nav a:before {
+    content: '';
+    border-bottom: 0.15rem solid var(--text-color1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 110%;
+    transition: 300ms right ease-in-out;
+}
+
+header nav a:after {
+    content: '';
+    border-bottom: 0.15rem solid var(--text-color1);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 110%;
+    transition: 300ms left ease-in-out;
+}
+
+header nav a:hover:before {
+    right: 50%;
+}
+
+header nav a:hover:after {
+    left: 50%;
+}
+
+header .action button {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--text-color1);
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+    border: 1px solid red;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--pr-bg1);
+    background-image: linear-gradient(95deg, var(--sc-bg), var(--pr-bg1));
+    position: relative;
+}
+
+.hero .container {
+    min-height: 100%;
+    position: relative;
+    padding: 25vh 0 6.25rem;
+}
