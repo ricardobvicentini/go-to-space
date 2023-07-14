@@ -41,14 +41,12 @@ a {
 }
 
 img {
-    border: 1px solid red;
     width: 100%;
     height: auto;
     display: inline-block;
 }
 
 .container {
-    border: 1px solid red;
     width: 100vw;
     max-width: 95%;
     margin: 0 auto;
@@ -95,17 +93,18 @@ header nav a:before {
     position: absolute;
     bottom: 0;
     left: 0;
-    right: 110%;
+    right: 100%;
     transition: 300ms right ease-in-out;
 }
 
 header nav a:after {
+    
     content: '';
     border-bottom: 0.15rem solid var(--text-color1);
     position: absolute;
     bottom: 0;
     right: 0;
-    left: 110%;
+    left: 100%;
     transition: 300ms left ease-in-out;
 }
 
@@ -126,6 +125,11 @@ header .action button {
     cursor: pointer;
 }
 
+header .action button i {
+    font-size: 1.5rem;
+    color: var(--text-color1);
+}
+
 /* Hero */
 
 .hero {
@@ -140,5 +144,53 @@ header .action button {
 .hero .container {
     min-height: 100%;
     position: relative;
-    padding: 25vh 0 6.25rem;
+    padding: 20vh 0 6.25rem;
+}
+
+.hero .mid {
+    width: 100%;
+    max-width: 95%;
+    margin: 0 auto;
+    height: 37.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mid-heading {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero .mid h2 {
+    border: 1px solid red;
+    font-size: 20rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-text-stroke: .2rem #4EA5D9;
+    -webkit-text-fill-color: transparent;
+    margin-block: -.5rem;
+}
+
+
+.hero .mid img {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-width: 60%;
+    height: auto;
+    filter: drop-shadow(0 0 3px var(--text-color1));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
