@@ -125,11 +125,13 @@ header nav a:after {
     transition: 300ms left ease-in-out;
 }
 
-header nav a:hover:before {
+header nav a:hover:before,
+header nav a:focus:before {
     right: 50%;
 }
 
-header nav a:hover:after {
+header nav a:hover:after,
+header nav a:focus:after {
     left: 50%;
 }
 
@@ -164,7 +166,6 @@ header .action button i {
 }
 
 .hero .container .mid {
-    border: 1px solid red;
     width: 100%;
     max-width: 95%;
     margin: 0 auto;
@@ -211,7 +212,6 @@ header .action button i {
 }
 
 .hero .bottom {
-
     position: absolute;
     bottom: 1.25rem;
     left: 50%;
@@ -222,4 +222,9 @@ header .action button i {
     font-size: 1.1rem;
     letter-spacing: 1.2px;
     color: var(--hl-color1);
+}
+
+.hero .bottom a:hover,
+.hero .bottom a:focus {
+    color: var(--hl-color3);
 }
