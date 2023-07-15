@@ -22,6 +22,7 @@
     --hl-color1: #4EA5D9;
     --hl-color2: #69c5fa;
     --text-color1: #f4f4f4;
+    --text-color2: #616161;
 }
 
 /* General */
@@ -36,6 +37,7 @@ body {
     font-weight: normal;
     line-height: 1.5;
     position: relative;
+    overflow: hidden; /* ! */
 }
 
 h1, h2 {
@@ -66,7 +68,7 @@ header {
     height: auto;
     padding: 1.8rem 0 1.25rem;
     background-color: transparent;
-    position: absolute; /*  */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -181,7 +183,7 @@ header .action button i {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     z-index: 1;
 }
 
@@ -193,20 +195,20 @@ header .action button i {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     z-index: 2;
-    animation: slide 800ms ease-in-out;
+    animation: slide 900ms ease-in-out;
 }
 
 @keyframes slide {
     10% {
         opacity: 0;
-        transform: translateY(-120px) translate(-50%, -50%);
+        transform: translateY(-130px) translate(-50%, -55%);
     }
 
     100% {
         opacity: 1;
-        transform: translateY(0px) translate(-50%, -50%);
+        transform: translateY(0px) translate(-50%, -55%);
     }
 }
 
@@ -228,7 +230,7 @@ header .action button i {
     border: 0;
     border-radius: 5px;
     padding: 8px 16px;
-    transition: 200ms;
+    transition: 300ms;
 
     &:hover,
     &:focus {
@@ -237,4 +239,56 @@ header .action button i {
         outline-color: var(--hl-color2);
         font-size: 1.12rem;
     }
+}
+
+.right-side {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.right-side a {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-color1);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin: 3.1rem 0;
+    padding: 0.6rem 2.1rem 0.6rem 0.6rem;
+    transition: 300ms;
+
+    &:hover,
+    &:focus {
+        color: var(--hl-color1);
+        font-weight: 600;
+    }
+}
+
+.right-side a.active {
+    color: var(--pr-bg1);
+    background-color: var(--hl-color1);
+    border-radius: 5px 0 0 5px;
+    font-weight: 600;
+} /* Colocar JS */
+
+.hamb {
+    width: 2.1rem;
+    height: auto;
+    position: absolute;
+    top: 8.5%;
+    right: 15%;
+    display: none;
+}
+
+.hamb span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color1);
+}
+
+.hamb .mid {
+    margin: 7px 0;
 }

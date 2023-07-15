@@ -1,0 +1,89 @@
+@media (width <= 940px) {
+    .hero .mid h2 {
+            font-size: 18rem;
+        }
+
+    .hero .mid img {
+        width: 28.1rem;
+    }
+}
+
+@media (width <= 840px) {
+    .hero .mid h2 {
+            font-size: 15rem;
+        }
+    
+        .hero .mid img {
+            width: 23.7rem;
+        }
+    
+    .hamb {
+        display: block;
+    }
+
+    header nav {
+        border: 1px solid red;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--sc-bg);
+        padding: 2.5rem 3.1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 100%;
+        transition: 500ms left;
+    }
+
+    header nav.click {
+        left: 0%;
+    }
+
+    header nav a {
+        display: block;
+        font-size: 2.3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: var(--text-color2);
+        margin: 0 0 2.5rem 0;
+        padding: 0;
+        transition: 300ms ease-in-out;
+        &:hover, 
+        &:focus {
+            color: var(--hl-color1);
+        }
+    }
+
+        header nav a:before,
+        header nav a:after {
+            content: none;
+    }
+
+}
+
+@media (width <= 690px) {
+    .hero .mid h2 {
+        font-size: 10rem;
+        top: 25%;
+    }
+
+    .hero .mid img {
+        width: 18.7rem;
+        top: 75%;
+    }
+}
+
+@media (width <= 540px) {
+    .hero .mid h2 {
+        font-size: 7rem;
+        top: 35%;
+    }
+
+    .hero .mid img {
+        width: 13.7rem;
+    }
+
+    .hero .container {
+        padding: 10vh 0 6.25rem;
+    }
+}
