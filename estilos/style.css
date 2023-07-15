@@ -20,8 +20,7 @@
     --pr-bg2: #383235;
     --sc-bg: #111111;
     --hl-color1: #4EA5D9;
-    --hl-color2: #4BA3C3;
-    --hl-color3: #00C2D1;
+    --hl-color2: #69c5fa;
     --text-color1: #f4f4f4;
 }
 
@@ -216,15 +215,26 @@ header .action button i {
     bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 3;
 }
 
 .hero .bottom a {
     font-size: 1.1rem;
     letter-spacing: 1.2px;
-    color: var(--hl-color1);
-}
+    color: var(--pr-bg1);
+    background-color: var(--hl-color1);
+    outline: 2px solid var(--pr-bg1);
+    outline-offset: -5px;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 16px;
+    transition: 200ms;
 
-.hero .bottom a:hover,
-.hero .bottom a:focus {
-    color: var(--hl-color3);
+    &:hover,
+    &:focus {
+        background-color: var(--hl-color2);
+        outline-offset: 5px;
+        outline-color: var(--hl-color2);
+        font-size: 1.12rem;
+    }
 }
