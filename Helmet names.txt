@@ -7,3 +7,15 @@ Stelux
 Cosmin
 
 Orbita
+
+// Colors
+
+Dark
+#212121
+#332E33
+#383235
+
+Blue
+#4BA3C3
+#00C2D1
+#4EA5D9

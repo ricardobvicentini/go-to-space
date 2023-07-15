@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 /* Reset */
 
 *,
@@ -21,12 +23,6 @@
     --hl-color2: #4BA3C3;
     --hl-color3: #00C2D1;
     --text-color1: #f4f4f4;
-
-    /* fonts */
-    --f-hero: clamp(9rem, 30vw, 18rem);
-
-    /* image size */
-    --img-hero: clamp(15rem, 55%, 30rem);
 }
 
 /* General */
@@ -36,9 +32,15 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
     line-height: 1.5;
     position: relative;
+}
+
+h1, h2 {
+    line-height: 1.1;
 }
 
 a {
@@ -47,13 +49,13 @@ a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: inline-block;
 }
 
 .container {
-    width: 100vw;
+    width: 80rem;
     max-width: 95%;
     margin: 0 auto;
 }
@@ -63,9 +65,9 @@ img {
 header {
     width: 100%;
     height: auto;
-    padding: 1rem 0 1rem;
+    padding: 1.8rem 0 1.25rem;
     background-color: transparent;
-    position: absolute;
+    position: absolute; /*  */
     top: 0;
     left: 0;
     right: 0;
@@ -84,23 +86,28 @@ header .logo {
 }
 
 header .logo img {
-    width: clamp(5rem, 15vw, 6.5rem);
+    width: 6.5rem;
     height: auto;
 }
 
 header nav a {
-    font-size: clamp(.8rem, 3vw, 1.2rem);
+    font-size: .95rem;
     font-weight: 600;
-    letter-spacing: 0.12rem;
+    letter-spacing: 1px;
     color: var(--text-color1);
-    margin: 0 2vw;
-    padding: 0 1.5vw .5vw;
+    margin: 0 12px;
+    padding: 0 8px 5px;
     position: relative;
+    transition: 300ms ease-in-out;
+}
+
+header nav a:hover {
+    color: var(--hl-color1);
 }
 
 header nav a:before {
     content: '';
-    border-bottom: 0.15rem solid var(--text-color1);
+    border-bottom: 2px solid var(--hl-color1);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -110,7 +117,7 @@ header nav a:before {
 
 header nav a:after {   
     content: '';
-    border-bottom: 0.15rem solid var(--text-color1);
+    border-bottom: 2px solid var(--hl-color1);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -153,10 +160,11 @@ header .action button i {
 .hero .container {
     min-height: 100%;
     position: relative;
-    padding: 20vh 0 6.25rem;
+    padding: 25vh 0 6.25rem;
 }
 
 .hero .container .mid {
+    border: 1px solid red;
     width: 100%;
     max-width: 95%;
     margin: 0 auto;
@@ -164,30 +172,22 @@ header .action button i {
     position: relative;
 }
 
-.mid .mid-heading {
+.hero .mid h2 {
+    font-size: 20rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    -webkit-text-stroke: 3px var(--hl-color1);
+    -webkit-text-fill-color: transparent;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
     z-index: 1;
-}
-
-.hero .mid h2 {
-    font-size: var(--f-hero);
-    font-weight: 600;
-    text-transform: uppercase;
-    -webkit-text-stroke: .2rem #4EA5D9;
-    -webkit-text-fill-color: transparent;
-    margin-block: -.5rem;
 }
 
 
 .hero .mid img {
-    width: var(--img-hero);
+    width: 31.2rem;
     height: auto;
     filter: drop-shadow(0 0 5px var(--text-color1));
     position: absolute;
@@ -208,4 +208,18 @@ header .action button i {
         opacity: 1;
         transform: translateY(0px) translate(-50%, -50%);
     }
+}
+
+.hero .bottom {
+
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero .bottom a {
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+    color: var(--hl-color1);
 }
