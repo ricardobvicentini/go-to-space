@@ -8,6 +8,18 @@ Cosmin
 
 Orbita
 
+NebulaVisor
+GalaxiShield
+SteluxGaze
+CosminGuard
+OrbitaVisage
+
+Nebula: Holographic-enhanced Visibility
+Galaxi: Advanced Solar Protection System
+Stelux: Integrated Night Vision Capability
+Cosmin: Lightweight All-Environment Design
+Orbita: 360-Degree Astral Vision Mode
+
 // Colors
 
 Dark

@@ -1,3 +1,5 @@
+/*  Slide do menu */
+
 const hamb = document.querySelector(".hamb");
 const nav = document.querySelector(".slide");
 const open = document.querySelector("#open");

@@ -84,6 +84,7 @@ header .container {
 
 header .logo {
     max-width: 8rem;
+
 }
 
 header .logo img {
@@ -161,7 +162,7 @@ header .action button i {
 }
 
 .hero .container {
-    min-height: 100%;
+    max-height: 100vh;
     position: relative;
     padding: 25vh 0 6.25rem;
 }
@@ -186,7 +187,6 @@ header .action button i {
     transform: translate(-50%, -55%);
     z-index: 1;
 }
-
 
 .hero .mid img {
     width: 31.2rem;
@@ -235,10 +235,33 @@ header .action button i {
     &:hover,
     &:focus {
         background-color: var(--hl-color2);
+        -webkit-text-stroke: .8px var(--text-color1);
+        -webkit-text-fill-color: var(--hl-color2);
+        text-shadow: 0 0 10px var(--text-color1);
         outline-offset: 5px;
         outline-color: var(--hl-color2);
         font-size: 1.12rem;
     }
+}
+
+.left-side {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.left-side .scard {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--hl-color1);
+    letter-spacing: 1.2px;
+    margin: 0 0 0 -5rem;
+    padding: 50px 15px 5px;
+    transform: rotate(-90deg);
+    border: 2px solid var(--hl-color1);
+    border-radius: 5px;
 }
 
 .right-side {
