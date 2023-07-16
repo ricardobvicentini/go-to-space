@@ -28,6 +28,11 @@
         color: var(--text-color1);
         font-size: 2rem;
         padding: 0;
+        cursor: pointer;
+    }
+
+    .hamb #close {
+        display: none;
     }
 
     header nav {
