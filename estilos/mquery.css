@@ -1,10 +1,15 @@
 @media (width <= 940px) {
     .hero .mid h2 {
-            font-size: 18rem;
+        font-size: 18rem;
         }
 
     .hero .mid img {
         width: 28.1rem;
+    }
+
+    .hero .mid :is(.astral-img, .meteor-img) {
+        width: 23rem;
+        height: auto;
     }
 
     .left-side .scard {
@@ -14,14 +19,22 @@
 
 @media (width <= 840px) {
     .hero .mid h2 {
-            font-size: 15rem;
-        }
+        font-size: 15rem;
+        top: 40%;
+    }
     
-        .hero .mid img {
-            width: 23.7rem;
-        }
+    .hero .mid img {
+        width: 23.7rem;
+        top: 40%;
+    }
+
+    .hero .mid :is(.astral-img, .meteor-img) {
+        width: 20rem;
+        height: auto;
+    }
     
     .hamb {
+        position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,7 +58,7 @@
         height: 100vh;
         background-color: var(--sc-bg);
         padding: 2.5rem 3.1rem;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
@@ -94,10 +107,35 @@
         top: 75%;
     }
 
+    .hero .mid :is(.astral-img, .meteor-img) {
+        width: 14rem;
+        height: auto;
+    }
+
     .left-side .scard {
         font-size: 1rem;
     }
-        
+
+    .hero .bottom a {
+        font-size: .8rem;
+        letter-spacing: 1.1px;
+        color: var(--pr-bg1);
+        background-color: var(--hl-color1);
+        outline: 2px solid var(--pr-bg1);
+        outline-offset: -5px;
+        padding: 6px 14px;
+        transition: 300ms;
+
+        &:hover,
+        &:focus {
+            background-color: var(--hl-color2);
+            -webkit-text-stroke: .4px var(--text-color1);
+            -webkit-text-fill-color: var(--hl-color2);
+            text-shadow: 0 0 8px var(--text-color1);
+            outline-offset: 3px;
+            outline-color: var(--hl-color2);
+        }
+    }
 }
 
 @media (width <= 540px) {
@@ -114,6 +152,11 @@
 
     .hero .mid img {
         width: 13.7rem;
+    }
+
+    .hero .mid :is(.astral-img, .meteor-img) {
+        width: 10.5rem;
+        height: auto;
     }
 
     .hero .container {

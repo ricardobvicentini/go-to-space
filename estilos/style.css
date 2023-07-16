@@ -37,7 +37,7 @@ body {
     font-weight: normal;
     line-height: 1.5;
     position: relative;
-    overflow: hidden; /* ! */
+    overflow-X: hidden; /* ! */
 }
 
 h1, h2 {
@@ -200,6 +200,12 @@ header .action button i {
     animation: slide 900ms ease-in-out;
 }
 
+.hero .mid :is(.astral-img, .meteor-img) {
+    width: 25rem;
+    height: auto;
+}
+
+
 @keyframes slide {
     10% {
         opacity: 0;
@@ -235,12 +241,11 @@ header .action button i {
     &:hover,
     &:focus {
         background-color: var(--hl-color2);
-        -webkit-text-stroke: .8px var(--text-color1);
+        -webkit-text-stroke: .4px var(--text-color1);
         -webkit-text-fill-color: var(--hl-color2);
         text-shadow: 0 0 10px var(--text-color1);
         outline-offset: 5px;
         outline-color: var(--hl-color2);
-        font-size: 1.12rem;
     }
 }
 

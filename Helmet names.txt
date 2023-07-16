@@ -1,6 +1,6 @@
 Nebula
 
-Galaxi
+Galaxy
 
 Stelux
 
@@ -9,16 +9,16 @@ Cosmin
 Orbita
 
 NebulaVisor
-GalaxiShield
-SteluxGaze
-CosminGuard
-OrbitaVisage
+GalaxyShield
+AstralGaze
+MeteorGuard
+CelestVisage
 
-Nebula: Holographic-enhanced Visibility
-Galaxi: Advanced Solar Protection System
-Stelux: Integrated Night Vision Capability
-Cosmin: Lightweight All-Environment Design
-Orbita: 360-Degree Astral Vision Mode
+Nebula: Lightweight All-Environment Design
+Galaxy: Integrated Night Vision Capability 
+Astral: Advanced Solar Protection System
+Meteor: Holographic-enhanced Visibility
+Celest: Ergonomic Pressure Equalization Mechanism
 
 // Colors
 
@@ -31,3 +31,6 @@ Blue
 #4BA3C3
 #00C2D1
 #4EA5D9
+
+Image size
+303 x 240
