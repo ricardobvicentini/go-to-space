@@ -18,11 +18,19 @@
         }
     
     .hamb {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 5;
+    }
+
+    .hamb i {
+        color: var(--text-color1);
+        font-size: 2rem;
+        padding: 0;
     }
 
     header nav {
-        border: 1px solid red;
         width: 100%;
         height: 100vh;
         background-color: var(--sc-bg);
@@ -36,7 +44,7 @@
     }
 
     header nav.click {
-        left: 0%;
+        left: 0;
     }
 
     header nav a {
@@ -52,6 +60,10 @@
         &:focus {
             color: var(--hl-color1);
         }
+    }
+
+    header nav a:first-child {
+        margin-top: 1rem;
     }
 
         header nav a:before,
