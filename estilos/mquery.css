@@ -188,7 +188,7 @@
     }
 
     .hero .bottom a {
-        font-size: .5rem;
+        font-size: .7rem;
         padding: 4px 10px;
     }
 
@@ -205,10 +205,22 @@
 
 @media (height <= 540px) and (orientation = landscape) {
 
+    .container {
+        overflow: hidden;
+    }
+
     header .logo img {
         width: 4rem;
         height: auto;
     }
+
+   header nav a {
+       font-size: 1.2rem;
+   }
+
+   header nav a:first-child {
+       margin-top: .5rem;
+   }
 
     .hamb {
         top: 2.8rem;
@@ -230,8 +242,13 @@
         height: auto;
     }
 
+    .hero .bottom {
+        top: 53%;
+        left: 80%;
+    }
+
     .hero .bottom a {
-        font-size: .5rem;
+        font-size: .6rem;
         padding: 4px 10px;
     }
 
@@ -239,18 +256,24 @@
         padding: 10vh 0 6.25rem;
     }
 
-    .left-side,
+    .left-side {
+        top: 57%;
+        left: 10%;
+    }
+
     .right-side {
         top: 60%;
     }
 
     .left-side .scard {
         font-size: .8rem;
-        margin: 0 0 0 -4.5rem;
+        margin: 0 auto;
+        padding: 5px 8px;
+        transform: rotate(0deg);
     }
 
     .right-side a {
-        font-size: .5rem;
+        font-size: .7rem;
         padding: 0.4rem .8rem 0.4rem 0.4rem;
         margin: 1rem 0;
     }
