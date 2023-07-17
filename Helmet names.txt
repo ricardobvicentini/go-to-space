@@ -22,15 +22,9 @@ Celest: Ergonomic Pressure Equalization Mechanism
 
 // Colors
 
-Dark
-#212121
-#332E33
-#383235
-
-Blue
-#4BA3C3
-#00C2D1
-#4EA5D9
-
-Image size
-303 x 240
+--pr-bg1: #081b29;
+--sc-bg: #111111;
+--hl-color1: #69c5fa;
+--hl-color2: #00d9ff;
+--text-color1: #f4f4f4;
+--text-color2: #616161;

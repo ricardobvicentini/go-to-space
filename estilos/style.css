@@ -16,11 +16,10 @@
 
 :root {
     /* colors */
-    --pr-bg1: #212121;
-    --pr-bg2: #383235;
+    --pr-bg1: #081b29;
     --sc-bg: #111111;
-    --hl-color1: #4EA5D9;
-    --hl-color2: #69c5fa;
+    --hl-color1: #69c5fa;
+    --hl-color2: #00d9ff;
     --text-color1: #f4f4f4;
     --text-color2: #616161;
 }
@@ -227,26 +226,32 @@ header .action button i {
 }
 
 .hero .bottom a {
+    position: relative;
     font-size: 1.1rem;
     letter-spacing: 1.2px;
-    color: var(--pr-bg1);
-    background-color: var(--hl-color1);
-    outline: 2px solid var(--pr-bg1);
-    outline-offset: -5px;
-    border: 0;
+    color: var(--text-color1);
+    border: 2px solid var(--hl-color1);
     border-radius: 5px;
     padding: 8px 16px;
-    transition: 300ms;
+    overflow: hidden;
+}
 
-    &:hover,
-    &:focus {
-        background-color: var(--hl-color2);
-        -webkit-text-stroke: .4px var(--text-color1);
-        -webkit-text-fill-color: var(--hl-color2);
-        text-shadow: 0 0 10px var(--text-color1);
-        outline-offset: 5px;
-        outline-color: var(--hl-color2);
-    }
+.hero .bottom a::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: 0;
+    width: 100%;
+    height: 250%;
+    background-image: linear-gradient(var(--pr-bg1), var(--hl-color2), var(--pr-bg1), var(--hl-color2));
+    z-index: -1;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+}
+
+.hero .bottom a:hover::before,
+.hero .bottom a:focus::before {
+    top: 0;
 }
 
 .left-side {

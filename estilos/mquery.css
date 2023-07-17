@@ -15,6 +15,10 @@
     .left-side .scard {
         font-size: 1.3rem;
     }
+
+    .hero .bottom a {
+        font-size: 1rem;
+    }
 }
 
 @media (width <= 840px) {
@@ -117,24 +121,14 @@
     }
 
     .hero .bottom a {
+        position: relative;
         font-size: .8rem;
-        letter-spacing: 1.1px;
-        color: var(--pr-bg1);
-        background-color: var(--hl-color1);
-        outline: 2px solid var(--pr-bg1);
-        outline-offset: -5px;
+        letter-spacing: 1.2px;
+        color: var(--text-color1);
+        border: 1px solid var(--hl-color1);
+        border-radius: 5px;
         padding: 6px 14px;
-        transition: 300ms;
-
-        &:hover,
-        &:focus {
-            background-color: var(--hl-color2);
-            -webkit-text-stroke: .4px var(--text-color1);
-            -webkit-text-fill-color: var(--hl-color2);
-            text-shadow: 0 0 8px var(--text-color1);
-            outline-offset: 3px;
-            outline-color: var(--hl-color2);
-        }
+        overflow: hidden;
     }
 }
 
