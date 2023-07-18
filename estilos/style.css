@@ -88,6 +88,17 @@ header .container.sticky {
     backdrop-filter: blur(5px);
 }
 
+header .container {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 1100ms ease-in
+}
+
+header .container.pop {
+    filter: blur(0px);
+    opacity: 1;
+}
+
 header .logo {
     max-width: 8rem;
 

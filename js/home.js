@@ -31,3 +31,17 @@ window.addEventListener("scroll", function(){
     let header = document.querySelector("header .container");
     header.classList.toggle('sticky', window.scrollY > 0);
 })
+
+/* Nav pop-in */
+
+const popers = document.querySelectorAll('header .container');
+
+const appearOnShow = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("pop", entry.isIntersecting)
+    })
+})
+
+popers.forEach(poper => {
+    appearOnShow.observe(poper)
+})
