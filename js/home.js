@@ -28,6 +28,6 @@ hamb.addEventListener("click", () => {
 })
 
 window.addEventListener("scroll", function(){
-    let header = document.querySelector("header");
+    let header = document.querySelector("header .container");
     header.classList.toggle('sticky', window.scrollY > 0);
 })

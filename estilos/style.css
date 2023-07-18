@@ -83,6 +83,11 @@ header .container {
     align-items: center;
 }
 
+header .container.sticky {
+    background-color: var(--nav-bl);
+    backdrop-filter: blur(5px);
+}
+
 header .logo {
     max-width: 8rem;
 
@@ -156,10 +161,6 @@ header .action button i {
     color: var(--text-color1);
 }
 
-header.sticky {
-    background-color: var(--nav-bl);
-    backdrop-filter: blur(5px);
-}
 
 /* Hero */
 
