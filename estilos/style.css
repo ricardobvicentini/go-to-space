@@ -17,6 +17,7 @@
 :root {
     /* colors */
     --pr-bg1: #081b29;
+    --nav-bl: #69c5fa18;
     --sc-bg: #111111;
     --hl-color1: #69c5fa;
     --hl-color2: #00d9ff;
@@ -28,6 +29,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-X: hidden;
 }
 
 body {
@@ -65,7 +67,7 @@ img {
 header {
     width: 100%;
     height: auto;
-    padding: 1.8rem 0 1.25rem;
+    padding: 1.2rem 0;
     background-color: transparent;
     position: fixed;
     top: 0;
@@ -102,7 +104,8 @@ header nav a {
     transition: 300ms ease-in-out;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a.active {
     color: var(--hl-color1);
 }
 
@@ -127,14 +130,17 @@ header nav a:after {
 }
 
 header nav a:hover:before,
-header nav a:focus:before {
+header nav a:focus:before,
+header nav a.active:before {
     right: 50%;
 }
 
 header nav a:hover:after,
-header nav a:focus:after {
+header nav a:focus:after,
+header nav a.active:after {
     left: 50%;
 }
+
 
 header .action button {
     display: inline-block;
@@ -148,6 +154,11 @@ header .action button {
 header .action button i {
     font-size: 1.5rem;
     color: var(--text-color1);
+}
+
+header.sticky {
+    background-color: var(--nav-bl);
+    backdrop-filter: blur(5px);
 }
 
 /* Hero */
@@ -243,7 +254,7 @@ header .action button i {
     left: 0;
     width: 100%;
     height: 250%;
-    background-image: linear-gradient(var(--pr-bg1), var(--hl-color2), var(--pr-bg1), var(--hl-color2));
+    background-image: linear-gradient(var(--pr-bg1), var(--hl-color1), var(--pr-bg1), var(--hl-color1));
     z-index: -1;
     overflow: hidden;
     transition: 400ms ease-in-out;
@@ -282,6 +293,7 @@ header .action button i {
 }
 
 .right-side a {
+    position: relative;
     display: block;
     font-size: 1.1rem;
     font-weight: 400;
@@ -290,18 +302,40 @@ header .action button i {
     text-transform: uppercase;
     margin: 3.1rem 0;
     padding: 0.6rem 2.1rem 0.6rem 0.6rem;
-    transition: 300ms;
+    transition: 500ms;
 
     &:hover,
     &:focus {
-        color: var(--hl-color1);
+        color: var(--pr-bg1);
         font-weight: 600;
     }
 }
 
+.right-side a::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-image: linear-gradient(to left, var(--pr-bg1), var(--hl-color1));
+    border: 1px solid var(--hl-color1);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    z-index: -1;
+    transition: 500ms;
+}
+
+.right-side a:hover::before,
+.right-side a:focus::before {
+    right: 0;
+}
+
 .right-side a.active {
     color: var(--pr-bg1);
-    background-color: var(--hl-color1);
+    background-image: linear-gradient(to left, var(--pr-bg1), var(--hl-color1));
+    border: 1px solid var(--hl-color1);
+    border-right: none;
     border-radius: 5px 0 0 5px;
     font-weight: 600;
 } /* Colocar JS */

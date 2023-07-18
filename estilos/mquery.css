@@ -69,6 +69,7 @@
 
     .hamb {
         position: fixed;
+        top: 3.4rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,10 +166,15 @@
 
     header nav a:first-child {
         margin-top: .5rem;
+        color: var(--hl-color1);
     }
 
     .hamb {
-        top: 3.29rem;
+        top: 2.9rem;
+    }
+
+    .hamb i {
+        font-size: 1.8rem;
     }
 
     .hero .mid h2 {
@@ -214,16 +220,16 @@
         height: auto;
     }
 
-   header nav a {
-       font-size: 1.2rem;
-   }
+    /* header nav {
+        display: block;
+    } */
 
-   header nav a:first-child {
-       margin-top: .5rem;
-   }
+    header nav a {
+        font-size: 1rem;
+    }
 
-    .hamb {
-        top: 2.8rem;
+    header nav a:first-child {
+        margin-top: .5rem;
     }
 
     .hero .mid h2 {
