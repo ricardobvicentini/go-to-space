@@ -209,58 +209,6 @@
 
 }
 
-@media (height <= 740px) {
-
-    body,
-    .container {
-        overflow: hidden;
-    }
-    
-    .hero .mid h2 {
-        font-size: 13rem;
-        top: 38%;
-    }
-    
-    .hero .mid img {
-        width: 21rem;
-        top: 38%;
-    }
-
-    .hero .mid :is(.astral-img, .meteor-img) {
-        width: 18rem;
-        height: auto;
-    }
-    
-    .hero .bottom a {
-        font-size: 1rem;
-        padding: 6px 12px;
-    }
-
-    .hero .bottom {
-    top: 55%;
-    left: 80%;
-    }
-
-    .left-side {
-        top: 58%;
-    }
-
-    .left-side .scard {
-        font-size: 1.3rem;
-    }
-
-    .right-side {
-        top: 58%;
-    }
-
-    .right-side a {
-        font-size: 1rem;
-        padding: 0.5rem 1rem 0.5rem 0.5rem;
-        margin: 1.4rem 0;
-    }
-
-}
-
 @media (height <= 540px) and (orientation = landscape) {
 
     .container {
@@ -330,6 +278,10 @@
         font-size: .7rem;
         padding: 0.4rem .8rem 0.4rem 0.4rem;
         margin: 1rem 0;
+    }
+
+    .hamb {
+        display: none;
     }
 
 }
