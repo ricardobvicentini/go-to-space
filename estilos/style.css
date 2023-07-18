@@ -81,6 +81,7 @@ header .container {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    border-radius: 50px;
 }
 
 header .container.sticky {
@@ -91,7 +92,7 @@ header .container.sticky {
 header .container {
     opacity: 0;
     filter: blur(15px);
-    transition: all 1100ms ease-in
+    transition: all 800ms 400ms ease-in;
 }
 
 header .container.pop {
@@ -219,7 +220,7 @@ header .action button i {
     left: 50%;
     transform: translate(-50%, -55%);
     z-index: 2;
-    animation: slide 900ms ease-in-out;
+    animation: slide 1100ms ease-in-out;
 }
 
 .hero .mid :is(.astral-img, .meteor-img) {
@@ -231,7 +232,7 @@ header .action button i {
 @keyframes slide {
     10% {
         opacity: 0;
-        transform: translateY(-130px) translate(-50%, -55%);
+        transform: translateY(-140px) translate(-50%, -55%);
     }
 
     100% {
@@ -245,8 +246,18 @@ header .action button i {
     bottom: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0;
+    filter: blur(15px);
     z-index: 3;
+    animation: display 1000ms 1500ms forwards;
 }
+
+@keyframes display {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}   
 
 .hero .bottom a {
     position: relative;
@@ -280,8 +291,17 @@ header .action button i {
 .left-side {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: -50%;
     transform: translateY(-50%);
+    animation: from-left 1100ms 500ms forwards;
+}
+
+@keyframes from-left {
+    
+    100% {
+            left: 0;
+        }
+
 }
 
 .left-side .scard {
@@ -300,8 +320,17 @@ header .action button i {
 .right-side {
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -50%;
     transform: translateY(-50%);
+    animation: from-right 1100ms 500ms forwards;
+}
+
+@keyframes from-right {
+
+    100% {
+        right: 0;
+    }
+
 }
 
 .right-side a {

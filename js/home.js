@@ -32,7 +32,7 @@ window.addEventListener("scroll", function(){
     header.classList.toggle('sticky', window.scrollY > 0);
 })
 
-/* Nav pop-in */
+/* Nav pop-in > bottom btn display */
 
 const popers = document.querySelectorAll('header .container');
 
