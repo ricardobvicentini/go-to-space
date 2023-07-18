@@ -28,3 +28,20 @@ Celest: Ergonomic Pressure Equalization Mechanism
 --hl-color2: #00d9ff;
 --text-color1: #f4f4f4;
 --text-color2: #616161;
+
+// Sizes 
+
+
+logo img
+min-width: 5rem - max-width: 6.5rem
+
+mid h2
+min-width: 7rem - max-width: 20rem
+
+mid img
+min-width: 13.7rem - max-width: 31.2
+
+astral - meteor imgs
+min-width: 10.5rem - max-width: 25rem
+
+h2
