@@ -2,11 +2,11 @@ Nebula
 
 Galaxy
 
-Stelux
+Astral
 
-Cosmin
+Meteor
 
-Orbita
+Celest
 
 NebulaVisor
 GalaxyShield

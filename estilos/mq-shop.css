@@ -44,7 +44,6 @@
     }
 
     .hamb {
-        position: fixed;
         top: 3.4rem;
         display: flex;
         justify-content: center;
