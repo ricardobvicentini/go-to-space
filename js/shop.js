@@ -41,17 +41,3 @@ const appearOnShow = new IntersectionObserver(entries => {
 popers.forEach(poper => {
     appearOnShow.observe(poper)
 })
-
-/* Card show */
-
-const cards = document.querySelectorAll('.wrapper');
-
-const appearOnDisplay = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle("show", entry.isIntersecting)
-    })
-})
-
-cards.forEach(card => {
-    appearOnDisplay.observe(card)
-})

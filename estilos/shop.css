@@ -48,12 +48,12 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
+/* img {
+    max-width: 80%;
     height: auto;
     display: inline-block;
 }
-
+ */
 .container {
     width: 80rem;
     max-width: 95%;
@@ -85,7 +85,7 @@ header .container {
 header .container {
     opacity: 0;
     filter: blur(15px);
-    transition: all 700ms ease-in;
+    transition: all 600ms ease-in;
 }
 
 header .container.pop {
@@ -186,41 +186,11 @@ header .action button i {
     flex-wrap: wrap;
     justify-content: center;
     gap: 5vh;
-    z-index: 1;
-}
-
-.wrapper:has(.card-one, .card-two, .card-three, .card-four, .card-five) {
-    opacity: 0;
-    filter: blur(15px);
-}
-
-.wrapper .card-one {
-    transition: all 700ms 800ms ease-in;
-}
-
-.wrapper .card-two {
-    transition: all 700ms 1000ms ease-in;
-}
-
-.wrapper .card-three {
-    transition: all 700ms 1200ms ease-in;
-}
-
-.wrapper .card-four {
-    transition: all 700ms 1400ms ease-in;
-}
-
-.wrapper .card-five {
-    transition: all 700ms 1600ms ease-in;
-}
-
-.wrapper.show {
-    filter: blur(0px);
-    opacity: 1;
+    /* z-index: 1; */
 }
 
 .wrapper .wrapper__card {
-    background-color: var(--text-color2);
+    background-color: transparent;
     color: var(--text-color1);
     position: relative;
     width: 18rem;
@@ -237,7 +207,69 @@ header .action button i {
     border-bottom: 1px solid #2e6686;
 }
 
+.wrapper-one {
+    opacity: 0;
+    filter: blur(15px);
+    animation: show 700ms 700ms ease-in forwards;   
+}
+
+.wrapper-two {
+    opacity: 0;
+    filter: blur(15px);
+    animation: show 700ms 900ms ease-in forwards;   
+}
+
+.wrapper-three {
+    opacity: 0;
+    filter: blur(15px);
+    animation: show 700ms 1100ms ease-in forwards;   
+}
+
+.wrapper-four {
+    opacity: 0;
+    filter: blur(15px);
+    animation: show 700ms 1300ms ease-in forwards;   
+}
+
+.wrapper-five {
+    opacity: 0;
+    filter: blur(15px);
+    animation: show 700ms 1500ms ease-in forwards;   
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+.card-one {
+    background: no-repeat url(../images/helmet1.png) center;
+    background-size: 90%;
+}
+
+.card-two {
+    background: no-repeat url(../images/helmet2.png) center;
+    background-size: 90%;
+}
+
+.card-three {
+    background: no-repeat url(../images/helmet3.png) center;
+    background-size: 80%;
+}
+
+.card-four {
+    background: no-repeat url(../images/helmet4.png) center;
+    background-size: 80%;
+}
+
+.card-five {
+    background: no-repeat url(../images/helmet5.png) center;
+    background-size: 90%;
+}
+
 .wrapper__card .card__content {
+    background-color: #69c5fa18;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -245,15 +277,6 @@ header .action button i {
     height: 100%;
     text-align: center;
     padding: 1.25rem;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 500ms;
-}
-
-.wrapper__card:hover .card__content {
-    transform: translateY(0px);
-    opacity: 1;
-    /*  transition: 500ms; */
 }
 
 .card__content h2 {
