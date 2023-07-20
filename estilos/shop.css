@@ -67,7 +67,7 @@ header {
     height: auto;
     padding: 1.2rem 0;
     background-color: transparent;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     right: 0;
@@ -85,7 +85,7 @@ header .container {
 header .container {
     opacity: 0;
     filter: blur(15px);
-    transition: all 800ms 400ms ease-in;
+    transition: all 800ms ease-in;
 }
 
 header .container.pop {
@@ -173,4 +173,76 @@ header .action button i {
     top: 4.1rem;
     right: 15%;
     display: none;
+}
+
+/* Cards */
+
+.wrapper {
+    border: 1px solid red;
+    position: relative;
+    margin: auto;
+    margin-block: 3vh;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5vh;
+    z-index: 1;
+}
+
+.wrapper .wrapper__card {
+    background-color: var(--text-color2);
+    color: var(--text-color1);
+    position: relative;
+    width: 15.6rem;
+    height: 25rem;
+    box-shadow: 8px 8px 20px #69c5fa1f;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--hl-color1);
+    border-left: 1px solid var(--hl-color1);
+}
+
+.wrapper__card .card__content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 1.25rem;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 500ms;
+}
+
+.wrapper__card:hover .card__content {
+    transform: translateY(0px);
+    opacity: 1;
+    /*  transition: 500ms; */
+}
+
+.card__content h2 {
+    border: 1px solid red;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.10);
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    pointer-events: none;
+}
+
+.card__content h3 {
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+.card__content a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color1);
 }
