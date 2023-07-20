@@ -85,7 +85,7 @@ header .container {
 header .container {
     opacity: 0;
     filter: blur(15px);
-    transition: all 800ms ease-in;
+    transition: all 700ms ease-in;
 }
 
 header .container.pop {
@@ -178,11 +178,10 @@ header .action button i {
 /* Cards */
 
 .wrapper {
-    border: 1px solid red;
     position: relative;
     margin: auto;
-    margin-block: 3vh;
-    width: 90vw;
+    margin-block: 5vh;
+    width: 60vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -190,13 +189,43 @@ header .action button i {
     z-index: 1;
 }
 
+.wrapper:has(.card-one, .card-two, .card-three, .card-four, .card-five) {
+    opacity: 0;
+    filter: blur(15px);
+}
+
+.wrapper .card-one {
+    transition: all 700ms 800ms ease-in;
+}
+
+.wrapper .card-two {
+    transition: all 700ms 1000ms ease-in;
+}
+
+.wrapper .card-three {
+    transition: all 700ms 1200ms ease-in;
+}
+
+.wrapper .card-four {
+    transition: all 700ms 1400ms ease-in;
+}
+
+.wrapper .card-five {
+    transition: all 700ms 1600ms ease-in;
+}
+
+.wrapper.show {
+    filter: blur(0px);
+    opacity: 1;
+}
+
 .wrapper .wrapper__card {
     background-color: var(--text-color2);
     color: var(--text-color1);
     position: relative;
-    width: 15.6rem;
+    width: 18rem;
     height: 25rem;
-    box-shadow: 8px 8px 20px #69c5fa1f;
+    box-shadow: 8px 8px 20px #69c5fa3f;
     border-radius: 15px;
     overflow: hidden;
     display: flex;
@@ -204,6 +233,8 @@ header .action button i {
     align-items: center;
     border-top: 1px solid var(--hl-color1);
     border-left: 1px solid var(--hl-color1);
+    border-right: 1px solid #2e6686;
+    border-bottom: 1px solid #2e6686;
 }
 
 .wrapper__card .card__content {
@@ -226,7 +257,6 @@ header .action button i {
 }
 
 .card__content h2 {
-    border: 1px solid red;
     font-size: 8rem;
     color: rgba(255, 255, 255, 0.10);
     position: absolute;
