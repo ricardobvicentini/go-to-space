@@ -115,6 +115,7 @@ header nav a {
 }
 
 header nav a:hover,
+header nav a:focus,
 header nav a.active {
     color: var(--hl-color1);
 }
@@ -298,7 +299,8 @@ header .action button i {
     transition: all 400ms ease-in-out;
 }
 
-.wrapper__card:hover .card-text {
+.wrapper__card:hover .card-text,
+.wrapper__card:focus .card-text {
     transform: translateY(0);
     background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.466), rgba(0, 0, 0, 0.452));
     backdrop-filter: blur(5px);
@@ -325,7 +327,8 @@ header .action button i {
     transition: transform 300ms 500ms;
 }
 
-.wrapper__card:hover .card-title::after {
+.wrapper__card:hover .card-title::after,
+.wrapper__card:focus .card-title::after {
     transform: scaleX(1);
 }
 

@@ -47,3 +47,4 @@ const appearOnShow = new IntersectionObserver(entries => {
 popers.forEach(poper => {
     appearOnShow.observe(poper)
 })
+

@@ -210,11 +210,7 @@ header nav {
 
 }
 
-@media (width <= 540px) and (height <= 580px) and (orientation = landscape) {
-
-    .container {
-        overflow: hidden;
-    }
+@media (height <= 360px) and (orientation = landscape) {
 
     header .logo img {
         width: 4rem;
@@ -286,3 +282,4 @@ header nav {
     }
 
 }
+
