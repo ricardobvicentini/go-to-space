@@ -44,4 +44,34 @@ min-width: 13.7rem - max-width: 31.2
 astral - meteor imgs
 min-width: 10.5rem - max-width: 25rem
 
-h2
+// Discover
+
+Explore the Universe with Cutting-Edge Space Helmets
+
+Welcome to our exclusive collection of state-of-the-art space helmets, designed to provide astronauts and space explorers with the ultimate protection and advanced features needed for interstellar journeys. Each helmet is meticulously crafted to meet the highest standards of safety, comfort, and innovation, allowing you to experience the cosmos like never before.
+
+Unleashing Innovation: Space Helmet Materials and Construction
+
+Behind the cutting-edge features of our space helmets lies a tale of innovation and precision. In this section, we delve into the materials and construction techniques that make our helmets the epitome of aerospace engineering. Discover the advanced composites, smart materials, and rigorous testing that ensure your space helmet remains a reliable guardian in the harshest cosmic environments.
+
+The Astronaut's Companion: Customizing Your Space Helmet
+
+Every space explorer is unique, and so should be their space helmet. In this section, we explore the possibilities of customizing your helmet to suit your preferences and requirements. From personalized designs and colors to tailor-made fit adjustments, create a space helmet that not only keeps you safe but also resonates with your individual style and personality.
+
+Beyond Space: Practical Applications of Advanced Helmet Technology
+
+While our space helmets are engineered for celestial voyages, their applications extend far beyond space exploration. In this section, we shed light on how the technologies and features present in our helmets find use in various terrestrial fields. From extreme environments on Earth to specialized industries, discover how our helmet innovations are pushing the boundaries of safety and efficiency.
+
+Enhancing Astronaut Performance: Human-Centric Design
+
+The success of space missions heavily depends on the well-being and performance of astronauts. In this segment, we explore the human-centric design approach behind our space helmets. Learn how ergonomic considerations, weight distribution, and user-friendly interfaces ensure that our helmets empower astronauts to perform their duties with maximum focus and efficiency.
+
+Sustainable Space Exploration: Eco-Friendly Helmet Initiatives
+
+We believe in responsible space exploration that preserves the beauty and integrity of the cosmos. This section highlights our commitment to sustainability and eco-friendliness in space helmet production. From eco-conscious materials to recycling initiatives, we take pride in contributing to a greener future for space exploration and encouraging environmentally-responsible practices across the aerospace industry.
+
+Equip Yourself for Cosmic Exploration
+
+In summary, our diverse range of space helmets is built to cater to the unique needs of modern space explorers. Whether you're a seasoned astronaut or an aspiring space traveler, these helmets are the perfect companions for your interstellar missions. From lightweight designs to advanced visibility features, our helmets ensure your safety, comfort, and a whole new level of awe-inspiring experiences as you journey through the cosmos. Choose your ideal space helmet today and embrace the wonders that await you in the vast expanse of the universe.
+
+
