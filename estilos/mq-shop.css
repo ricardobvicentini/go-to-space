@@ -6,11 +6,11 @@
         height: 100vh;
         background-color: var(--sc-bg);
         padding: 2.5rem 3.1rem;
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
-        left: 100%;
+        left: 120%;
         transition: 500ms left;
     }
 
@@ -44,6 +44,7 @@
     }
 
     .hamb {
+        position: absolute;
         top: 3.4rem;
         display: flex;
         justify-content: center;
@@ -62,7 +63,6 @@
         display: none;
         color: var(--text-color2);
     }
-
 }
 
 @media (width <=540px) {
@@ -78,6 +78,7 @@
 
     header nav a:first-child {
         margin-top: .5rem;
+        color: var(--hl-color1);
     }
 
     .hamb {
@@ -87,14 +88,9 @@
     .hamb i {
         font-size: 1.8rem;
     }
-
 }
 
-@media (width <=540px) and (height <=580px) and (orientation=landscape) {
-
-    .container {
-        overflow: hidden;
-    }
+@media (height <=360px) and (orientation=landscape) {
 
     header .logo img {
         width: 4rem;
@@ -109,8 +105,13 @@
         margin-top: .5rem;
     }
 
-    .hamb {
-        display: none;
+    .wrapper {
+        width: 88vw;
+    }
+
+    .wrapper .wrapper__card {
+        width: 12rem;
+        height: 15rem;
     }
 
 }

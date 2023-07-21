@@ -38,6 +38,7 @@ body {
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.5;
+    padding-block: 8rem 5rem;
     position: relative;
     overflow-X: hidden;
     /* ! */
@@ -67,7 +68,7 @@ header {
     height: auto;
     padding: 1.2rem 0;
     background-color: transparent;
-    /* position: fixed; */
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -185,15 +186,15 @@ header .action button i {
     width: 60vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 5vh;
     /* z-index: 1; */
 }
 
 .wrapper .wrapper__card {
     position: relative;
-    width: 18rem;
-    height: 25rem;
+    width: clamp(15rem, 20vw, 18rem);
+    height: clamp(18rem, 30vw, 25rem);
     box-shadow: 8px 8px 20px #69c5fa3f;
     border-radius: 15px;
     overflow: hidden;
@@ -309,7 +310,8 @@ header .action button i {
 .card-text .card-title {
     position: relative;
     width: max-content;
-    font-size: 1.8rem;
+    margin-bottom: clamp(.5rem, 1vw, .8rem);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     color: var(--hl-color2);
     /* z-index: 1; */
 }
@@ -333,8 +335,8 @@ header .action button i {
 }
 
 .card-text p {
-    /* margin-inline: 0 1vw; */
     color: var(--hl-color2);
+    font-size: clamp(.8rem, 1.6vw, 1rem);
 }
 
 .card-text a {
@@ -342,4 +344,5 @@ header .action button i {
     text-decoration: none;
     color: var(--text-color1);
     align-self: center;
+    font-size: clamp(.8rem, 1.6vw, 1rem);
 }
