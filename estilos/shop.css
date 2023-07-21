@@ -288,10 +288,10 @@ header .action button i {
 }
 
 .card-text {
-    --padding: 1rem;
+    --padding: .8rem;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.336), rgba(0, 0, 0, 0.452)); */
     height: 50%; 
     padding: var(--padding);
@@ -310,10 +310,9 @@ header .action button i {
 .card-text .card-title {
     position: relative;
     width: max-content;
-    margin-bottom: clamp(.5rem, 1vw, .8rem);
+    margin-bottom: clamp(.8rem, 1.2vw, 1.2rem);
     font-size: clamp(1.4rem, 2.5vw, 1.8rem);
     color: var(--hl-color2);
-    /* z-index: 1; */
 }
 
 .card-title::after {
@@ -336,13 +335,18 @@ header .action button i {
 
 .card-text p {
     color: var(--hl-color2);
-    font-size: clamp(.8rem, 1.6vw, 1rem);
+    font-size: clamp(.8rem, 1.5vw, 1.2rem);
 }
 
 .card-text a {
     display: inline-block;
     text-decoration: none;
     color: var(--text-color1);
-    align-self: center;
-    font-size: clamp(.8rem, 1.6vw, 1rem);
+    align-self: flex-end;
+    font-size: clamp(.6rem, 1.5vw, 1rem);
+    font-weight: 600;
+    padding-block: minmax(4px, 5px);
+    padding-inline: 8px;
+    border: 1px solid var(--hl-color2);
+    border-radius: 5px;
 }

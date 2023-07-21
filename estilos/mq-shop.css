@@ -105,6 +105,10 @@
         margin-top: .5rem;
     }
 
+    .hamb {
+        top: 2.25rem;
+    }
+
     .wrapper {
         width: 88vw;
     }
@@ -112,6 +116,10 @@
     .wrapper .wrapper__card {
         width: 12rem;
         height: 15rem;
+    }
+
+    .card-text .card-title {
+        margin-bottom: 1vw;
     }
 
 }

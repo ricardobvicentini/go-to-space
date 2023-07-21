@@ -225,6 +225,10 @@
         margin-top: .5rem;
     }
 
+    .hamb {
+        top: 2.25rem;
+    }
+
     .hero .mid h2 {
         font-size: 6rem;
         -webkit-text-stroke: 2px var(--hl-color1);
