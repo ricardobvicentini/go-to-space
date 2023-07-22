@@ -78,7 +78,6 @@
 
     header nav a:first-child {
         margin-top: .5rem;
-        color: var(--hl-color1);
     }
 
     .hamb {
@@ -91,6 +90,10 @@
 }
 
 @media (height <=360px) and (orientation=landscape) {
+
+    body {
+        height: 100vh;
+    }
 
     header .logo img {
         width: 4rem;

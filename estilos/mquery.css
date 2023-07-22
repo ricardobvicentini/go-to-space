@@ -201,6 +201,7 @@
 
     .hero .container {
         padding: 10vh 0 6.25rem;
+        margin-bottom: 0;
     }
 
     .right-side a {
@@ -260,19 +261,23 @@
     }
 
     .left-side {
-        top: 57%;
-        left: 10%;
+        display: none;
     }
 
-    .right-side {
-        top: 60%;
+    .left-side-land {
+        top: 52.5%;
+        left: 20px;
     }
 
-    .left-side .scard {
+    .left-side-land .scard {
         font-size: .8rem;
         margin: 0 auto;
         padding: 5px 8px;
         transform: rotate(0deg);
+    }
+
+    .right-side {
+        top: 60%;
     }
 
     .right-side a {
