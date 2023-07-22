@@ -33,7 +33,6 @@ html {
 }
 
 body {
-    border: 1px solid red;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
