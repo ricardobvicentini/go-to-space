@@ -183,7 +183,7 @@ header .action button i {
     background-color: var(--pr-bg1);
     background-image: linear-gradient(95deg, var(--sc-bg), var(--pr-bg1));
     position: relative;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 .hero .container {
