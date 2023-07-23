@@ -33,7 +33,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    max-height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: normal;
@@ -289,10 +289,6 @@ header .action button i {
     top: 0;
 }
 
-.left-side-land {
-    position: absolute;
-}
-
 .left-side {
     position: absolute;
     top: 50%;
@@ -309,8 +305,7 @@ header .action button i {
 
 }
 
-.left-side .scard,
-.left-side-land .scard {
+.left-side .scard {
     display: block;
     font-size: 1.5rem;
     font-weight: 400;

@@ -261,15 +261,22 @@
     }
 
     .left-side {
-        display: none;
-    }
-
-    .left-side-land {
         top: 52.5%;
-        left: 20px;
+        left: 10%;
+        transform: translateY(0);
+            animation: from-left 1100ms 500ms forwards;
+        }
+        
+        @keyframes from-left {
+        
+            0% {
+                left: 10%;
+            }
+        
+        }
     }
 
-    .left-side-land .scard {
+    .left-side .scard {
         font-size: .8rem;
         margin: 0 auto;
         padding: 5px 8px;
@@ -277,7 +284,7 @@
     }
 
     .right-side {
-        top: 60%;
+        top: 55%;
     }
 
     .right-side a {
@@ -285,6 +292,4 @@
         padding: 0.4rem .8rem 0.4rem 0.4rem;
         margin: 1rem 0;
     }
-
-}
 
