@@ -6,37 +6,67 @@
     <title>Contact</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos/contact.css">
+    <link rel="stylesheet" href="estilos/mq-contact.css">
     <script src="js/contact.js" defer></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
     <!-- Header -->
-
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href=""><img src="images/rocket-logo-l.png" alt="Rocket logo" width="120px" height="120px"></a>
-            </div>
-    
-            <nav class="slide">
-                <a href="index.html">Home</a>
-                <a href="">Discover</a>
-                <a href="shop.html">Shop</a>
-                <a href="contact.html" class="active">Contact </a>
-            </nav>
-    
-            <div class="action">
-                <button class="search"><i class='bx bx-search'></i></button>
-            </div>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href=""><img src="images/rocket-logo-l.png" alt="Rocket logo" width="120px" height="120px"></a>
         </div>
-    </header>
 
-    <!-- Hamburger -->
+        <nav class="slide">
+            <a href="index.html">Home</a>
+            <a href="">Discover</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
 
-    <div class="hamb">
-        <i id="open" class='bx bx-menu'></i>
-        <i id="close" class='bx bx-x'></i>
+        <div class="action">
+            <button class="search"><i class='bx bx-search'></i></button>
+        </div>
+    </div>
+</header>
+
+<!-- Hamburger -->
+
+<div class="hamb">
+    <i id="open" class='bx bx-menu'></i>
+    <i id="close" class='bx bx-x'></i>
+</div>
+
+<section>
+    
+    <div class="wrapper">
+        <div class="wrapper__form login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="wrapper__form__input">
+                    <input type="text" required>
+                    <label>Username</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="wrapper__form__input">
+                    <input type="password" required>
+                    <label>Password</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <button type="submit" class="wrapper__form__btn">Login</button>
+                <div class="wrapper__form__logreg">
+                    <p>Don't have an account? <a href="#" class="wrapper__form__logreg__link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
     </div>
     
+</section>
+
+
 </body>
+
 </html>

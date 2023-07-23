@@ -179,10 +179,11 @@ header .action button i {
 
 .hero {
     width: 100%;
-    height: 100vh;
+    max-height: 100vh;
     background-color: var(--pr-bg1);
     background-image: linear-gradient(95deg, var(--sc-bg), var(--pr-bg1));
     position: relative;
+    overflow-y: hidden;
 }
 
 .hero .container {
