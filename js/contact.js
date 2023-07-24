@@ -49,4 +49,9 @@ popers.forEach(poper => {
 })
 
 const wrapper = document.querySelector('.wrapper');
-const wrapper = document.querySelector('.wrapper');
+const registerLink = document.querySelector('.wrapper__form__logreg__link');
+const loginLink = document.querySelector('.wrapper__form__register__link');
+
+registerLink.onclick = () => {
+    wrapper.classList.add('active');
+}
