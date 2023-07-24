@@ -194,6 +194,7 @@ section {
 }
 
 .wrapper {
+    border: 1px solid red;
     position: relative;
     width: 85vw;
     height: 40vh;
@@ -220,9 +221,37 @@ section {
     padding: 0 1rem 0.6rem;
 }
 
+.wrapper__form.login .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: 700ms ease;
+}
+
+.wrapper.active .wrapper__form.login .animation {
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay: calc(100ms * var(--i));
+}
+
 .wrapper__form.register {
-    right: -10000px;
+    right: 0;
     padding: 1.5rem 1.2rem .4rem;
+}
+
+.wrapper__form.register .animation {
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: 700ms ease;
+}
+
+.wrapper.active .wrapper__form.register .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(100ms * var(--i));
 }
 
 .wrapper__form h2 {
@@ -269,7 +298,7 @@ section {
     transition: 500ms;
 }
 
-/* Username e password sobrem ao clicar no campo */
+/* Username e password sobem ao clicar no campo */
 
 .wrapper__form__input input:focus~label,
 .wrapper__form__input input:valid~label {
@@ -377,7 +406,7 @@ section {
     position: absolute;
     top: 0;
     width: 50%;
-    height: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -389,10 +418,38 @@ section {
     padding: 0 1rem .6rem 2.5rem;
 }
 
+.wrapper__info.login .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: 700ms ease;
+}
+
+.wrapper.active .wrapper__info.login .animation {
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay: calc(100ms * var(--i));
+}
+
 .wrapper__info.register {
-    left: -10000px;
     text-align: left;
     padding: 0 2.5rem .6rem 1rem;
+    pointer-events: none;
+}
+
+.wrapper__info.register .animation {
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: 700ms ease;
+}
+
+.wrapper.active .wrapper__info.register .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(100ms * var(--i));
 }
 
 .wrapper__info h2 {
@@ -418,10 +475,15 @@ section {
     transform: rotate(10deg) skewY(40deg);
     /* transform: rotate(0deg) skewY(0deg); */
     transform-origin: bottom right;
+    transition: 1400ms ease;
+}
+
+.wrapper.active .wrapper__bg--animate {
+    transform: rotate(0deg) skewY(0deg);
+    transition-delay: 50ms;
 }
 
 .wrapper__bg--animate2 {
-    border: 1px solid red;
     position: absolute;
     top: 100%;
     left: 85px;
@@ -432,5 +494,11 @@ section {
     /* transform: rotate(-11deg) skewY(-41deg); */
     transform: rotate(0deg) skewY(0deg);
     transform-origin: bottom left;
+    /* z-index: -1; */
+    transition: 1400ms ease;
 }
 
+.wrapper.active .wrapper__bg--animate2 {
+    transform: rotate(-11deg) skewY(-41deg);
+    transition-delay: 1000ms;
+}
