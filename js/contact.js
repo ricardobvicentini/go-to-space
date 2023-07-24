@@ -48,3 +48,5 @@ popers.forEach(poper => {
     appearOnShow.observe(poper)
 })
 
+const wrapper = document.querySelector('.wrapper');
+const wrapper = document.querySelector('.wrapper');

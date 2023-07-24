@@ -195,11 +195,15 @@ section {
 
 .wrapper {
     position: relative;
-    width: 75vw;
+    width: 85vw;
     height: 40vh;
     background-color: transparent;
     border: 2px solid var(--hl-color2);
+    box-shadow: 0 0 20px var(--hl-color2);
+    overflow: hidden;
 }
+
+/* Login - Left Side */
 
 .wrapper__form {
     position: absolute;
@@ -213,7 +217,12 @@ section {
 
 .wrapper__form.login {
     left: 0;
-    padding: 0 .6rem;
+    padding: 0 1rem 0.6rem;
+}
+
+.wrapper__form.register {
+    right: -10000px;
+    padding: 1.5rem 1.2rem .4rem;
 }
 
 .wrapper__form h2 {
@@ -321,10 +330,11 @@ section {
     font-size: .4rem;
     color: var(--text-color1);
     text-align: center;
-    margin: 1rem 0 .5rem;
+    margin: .5rem 0;
 }
 
-.wrapper__form__logreg__link {
+.wrapper__form__logreg__link,
+.wrapper__form__register__link {
     position: relative;
     text-decoration: none;
     color: var(--hl-color2);
@@ -359,5 +369,68 @@ section {
 .wrapper__form__logreg__link:hover::after,
 .wrapper__form__logreg__link:focus::after {
     left: 50%;
+}
+
+/* Login - Right Side */
+
+.wrapper__info {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wrapper__info.login {
+    right: 0;
+    text-align: right;
+    padding: 0 1rem .6rem 2.5rem;
+}
+
+.wrapper__info.register {
+    left: -10000px;
+    text-align: left;
+    padding: 0 2.5rem .6rem 1rem;
+}
+
+.wrapper__info h2 {
+    font-size: 1rem;
+    color: var(--text-color1);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.wrapper__info p {
+    font-size: .5rem;
+    color: var(--text-color1);
+}
+
+.wrapper__bg--animate {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 26.5rem;
+    height: 16.7rem;
+    border-bottom: 1px solid var(--hl-color2);
+    background-image: linear-gradient(45deg, var(--pr-bg1), var(--hl-color2));
+    transform: rotate(10deg) skewY(40deg);
+    /* transform: rotate(0deg) skewY(0deg); */
+    transform-origin: bottom right;
+}
+
+.wrapper__bg--animate2 {
+    border: 1px solid red;
+    position: absolute;
+    top: 100%;
+    left: 85px;
+    width: 26.5rem;
+    height: 22.7rem;
+    border-top: 1px solid var(--hl-color2);
+    background-color: var(--pr-bg1);
+    /* transform: rotate(-11deg) skewY(-41deg); */
+    transform: rotate(0deg) skewY(0deg);
+    transform-origin: bottom left;
 }
 
