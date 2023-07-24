@@ -226,6 +226,7 @@ section {
     opacity: 1;
     filter: blur(0);
     transition: 700ms ease;
+    transition-delay: calc(100ms * var(--j));
 }
 
 .wrapper.active .wrapper__form.login .animation {
@@ -245,6 +246,7 @@ section {
     opacity: 0;
     filter: blur(10px);
     transition: 700ms ease;
+    transition-delay: calc(100ms * var(--j));
 }
 
 .wrapper.active .wrapper__form.register .animation {
@@ -423,6 +425,7 @@ section {
     opacity: 1;
     filter: blur(0);
     transition: 700ms ease;
+    transition-delay: calc(100ms * var(--j));
 }
 
 .wrapper.active .wrapper__info.login .animation {
@@ -443,6 +446,7 @@ section {
     opacity: 0;
     filter: blur(10px);
     transition: 700ms ease;
+    transition-delay: calc(100ms * var(--j));
 }
 
 .wrapper.active .wrapper__info.register .animation {
@@ -473,14 +477,14 @@ section {
     border-bottom: 1px solid var(--hl-color2);
     background-image: linear-gradient(45deg, var(--pr-bg1), var(--hl-color2));
     transform: rotate(10deg) skewY(40deg);
-    /* transform: rotate(0deg) skewY(0deg); */
     transform-origin: bottom right;
-    transition: 1400ms ease;
+    transition: 1300ms ease;
+    transition-delay: 1400ms;
 }
 
 .wrapper.active .wrapper__bg--animate {
     transform: rotate(0deg) skewY(0deg);
-    transition-delay: 50ms;
+    transition-delay: 400ms;
 }
 
 .wrapper__bg--animate2 {
@@ -488,17 +492,16 @@ section {
     top: 100%;
     left: 85px;
     width: 26.5rem;
-    height: 22.7rem;
+    height: 25rem;
     border-top: 1px solid var(--hl-color2);
     background-color: var(--pr-bg1);
-    /* transform: rotate(-11deg) skewY(-41deg); */
     transform: rotate(0deg) skewY(0deg);
     transform-origin: bottom left;
-    /* z-index: -1; */
-    transition: 1400ms ease;
+    transition: 1100ms ease;
+    transition-delay: 400ms;
 }
 
 .wrapper.active .wrapper__bg--animate2 {
     transform: rotate(-11deg) skewY(-41deg);
-    transition-delay: 1000ms;
+    transition-delay: 1300ms;
 }

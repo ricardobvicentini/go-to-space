@@ -55,3 +55,7 @@ const loginLink = document.querySelector('.wrapper__form__register__link');
 registerLink.onclick = () => {
     wrapper.classList.add('active');
 }
+
+loginLink.onclick = () => {
+    wrapper.classList.remove('active');
+}
