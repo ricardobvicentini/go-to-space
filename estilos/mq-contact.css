@@ -1,3 +1,91 @@
+@media (width > 1280px) {
+    .wrapper {
+        width: 75vw;
+        height: 40vh;
+    }
+
+    .wrapper .wrapper__bg--animate {
+        width: 80rem;
+        height: 59rem;
+    }
+
+    .wrapper .wrapper__bg--animate2 {
+        position: absolute;
+        top: 100%;
+        left: 40%;
+}
+
+}
+
+@media (width > 1024px) {
+    .wrapper {
+        width: 60vw;
+        height: 60vh;
+    }
+
+    .wrapper__form.login {
+        padding: 0 3rem 1.8rem;
+        top: 3%;
+    }
+
+    .wrapper__form.register {
+        padding: 3rem 2.4rem .8rem;
+        text-align: center;
+    }
+
+    .wrapper__form h2 {
+        font-size: 2rem;
+    }
+
+    .wrapper__form__input input {
+        font-size: 1rem;
+    }
+
+    .wrapper__form__input label {
+        font-size: 1rem;
+    }
+
+    .wrapper__form__input i {
+        font-size: 1.2rem;
+    }
+
+    .wrapper__form__btn {
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    .wrapper__form__logreg {
+        font-size: .8rem;
+    }
+
+    .wrapper__info.register {
+        padding: 0 5rem 1.2rem 2rem;
+    }
+
+    .wrapper__info.login {
+        padding: 1rem 2rem 1.2rem 5rem;
+    }
+
+    .wrapper__info h2 {
+        font-size: 2rem;
+    }
+
+    .wrapper__info p {
+        font-size: 1rem;
+    }
+
+    .wrapper__bg--animate {
+        width: 70rem;
+        height: 45rem;
+    }
+
+    .wrapper__bg--animate2 {
+        width: 80rem;
+        height: 80rem;
+        left: 45%;
+    }
+}
+
 @media (width <=690px) {
 
     header nav {
@@ -109,6 +197,28 @@
 
     .hamb {
         top: 2.25rem;
+    }
+
+    .wrapper {
+        margin-top: 4rem;
+        width: 70vw;
+        height: 60vh;
+    }
+
+   .wrapper__form__input {
+       margin-block: .5rem;
+   }
+
+    .wrapper__bg--animate {
+        width: 30rem;
+        height: 22rem;
+        left: -5%;
+    }
+
+    .wrapper__bg--animate2 {
+        width: 26.5rem;
+        height: 25rem;
+        left: 38%;
     }
 
 }

@@ -194,7 +194,6 @@ section {
 }
 
 .wrapper {
-    border: 1px solid red;
     position: relative;
     width: 85vw;
     height: 40vh;
@@ -219,6 +218,7 @@ section {
 .wrapper__form.login {
     left: 0;
     padding: 0 1rem 0.6rem;
+    text-align: center;
 }
 
 .wrapper__form.login .animation {
@@ -372,7 +372,8 @@ section {
     font-weight: 600;
 }
 
-.wrapper__form__logreg__link::before {
+.wrapper__form__logreg__link::before,
+.wrapper__form__register__link::before {
     content: '';
     position: absolute;
     border-bottom: 1px solid var(--hl-color2);
@@ -382,7 +383,8 @@ section {
     transition: 300ms right ease-in-out;
 }
 
-.wrapper__form__logreg__link::after {
+.wrapper__form__logreg__link::after,
+.wrapper__form__register__link::after {
     content: '';
     position: absolute;
     border-bottom: 1px solid var(--hl-color2);
@@ -393,12 +395,16 @@ section {
 }
 
 .wrapper__form__logreg__link:hover::before,
-.wrapper__form__logreg__link:focus::before {
+.wrapper__form__logreg__link:focus::before,
+.wrapper__form__register__link:hover::before,
+.wrapper__form__register__link:focus::before {
     right: 50%;
 }
 
 .wrapper__form__logreg__link:hover::after,
-.wrapper__form__logreg__link:focus::after {
+.wrapper__form__logreg__link:focus::after,
+.wrapper__form__register__link:hover::after,
+.wrapper__form__register__link:focus::after {
     left: 50%;
 }
 
@@ -490,7 +496,7 @@ section {
 .wrapper__bg--animate2 {
     position: absolute;
     top: 100%;
-    left: 85px;
+    left: 25%;
     width: 26.5rem;
     height: 25rem;
     border-top: 1px solid var(--hl-color2);
@@ -505,3 +511,4 @@ section {
     transform: rotate(-11deg) skewY(-41deg);
     transition-delay: 1300ms;
 }
+
