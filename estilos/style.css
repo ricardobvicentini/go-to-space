@@ -347,12 +347,6 @@ header .action button i {
     margin: 3.1rem 0;
     padding: 0.6rem 2.1rem 0.6rem 0.6rem;
     transition: 500ms;
-
-    &:hover,
-    &:focus {
-        color: var(--pr-bg1);
-        font-weight: 600;
-    }
 }
 
 .right-side a::before {
@@ -366,6 +360,7 @@ header .action button i {
     border: 1px solid var(--hl-color1);
     border-right: none;
     border-radius: 5px 0 0 5px;
+    filter: blur(10px);
     z-index: -1;
     transition: 500ms;
 }
@@ -373,16 +368,17 @@ header .action button i {
 .right-side a:hover::before,
 .right-side a:focus::before {
     right: 0;
+    filter: blur(0);
 }
 
-.right-side a.active {
-    color: var(--pr-bg1);
+.right-side a.show {
+    color: var(--text-color1);
     background-image: linear-gradient(to left, var(--pr-bg1), var(--hl-color1));
     border: 1px solid var(--hl-color1);
     border-right: none;
     border-radius: 5px 0 0 5px;
     font-weight: 600;
-} /* Colocar JS */
+}
 
 .hamb {
     width: 2.1rem;
