@@ -182,7 +182,7 @@ header .action button i {
 .wrapper {
     position: relative;
     margin: auto;
-    margin-block: 5vh;
+    margin-block: 3vh;
     width: 60vw;
     display: flex;
     flex-wrap: wrap;
@@ -192,9 +192,10 @@ header .action button i {
 }
 
 .wrapper .wrapper__card {
+    border: 1px solid red;
     position: relative;
-    width: clamp(15rem, 20vw, 18rem);
-    height: clamp(18rem, 30vw, 25rem);
+    width: clamp(15rem, 20vw, 16rem);
+    height: clamp(18rem, 30vw, 22rem);
     box-shadow: 8px 8px 20px #69c5fa3f;
     border-radius: 15px;
     overflow: hidden;

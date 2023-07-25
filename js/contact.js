@@ -48,6 +48,8 @@ popers.forEach(poper => {
     appearOnShow.observe(poper)
 })
 
+/* Click animation */
+
 const wrapper = document.querySelector('.wrapper');
 const registerLink = document.querySelector('.wrapper__form__logreg__link');
 const loginLink = document.querySelector('.wrapper__form__register__link');
