@@ -70,7 +70,7 @@ header {
     height: auto;
     padding: 1.2rem 0;
     background-color: transparent;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -190,7 +190,6 @@ header .action button i {
 .section {
     border: 1px solid red;
     position: relative;
-    margin-top: 13%;
     padding: 5rem 6.25rem;
     color: var(--text-color1);
     display: flex;
@@ -200,6 +199,7 @@ header .action button i {
 
 .wrapper {
     position: relative;
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,12 +207,13 @@ header .action button i {
 }
 
 .wrapper__title {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 3.1rem;
 }
 
 .wrapper__content {
     /* width: 71.8rem; */
+    border: 1px solid red;
     position: relative;
     width: 95%;
     display: flex;
@@ -223,8 +224,6 @@ header .action button i {
 .wrapper__content__image {
     border: 1px solid red;
     position: relative;
-    width: 40%;
-    height: 30rem;
     overflow: hidden;
 }
 
@@ -239,15 +238,59 @@ header .action button i {
     z-index: 100;
 }
 
+.image--one {
+    width: 70rem;
+    height: 30rem;
+}
+
 .wrapper__content__text {
     border: 1px solid red;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     padding: 2.5rem;
-    max-width: 25rem;
+    max-width: 55%;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    z-index: 110;
+    z-index: 200;
+    transform: translate(-5rem, 4rem);
 }
 
+.wrapper__content__text h3 {
+    font-size: 2rem;
+    margin-bottom: 0.625rem;
+}
+
+.image--two {
+    width: 45rem;
+    height: 25rem;
+}
+
+.wrapper__content__info {
+    width: 43.7rem;
+    margin-left: 3.1rem;
+}
+
+.wrapper__content__info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.625rem;
+}
+
+.wrapper__content__info p {
+    margin-bottom: 2rem;
+}
+
+.image--three {
+    width: 45rem;
+    height: 25rem;
+}
+
+.image--four {
+    width: 30rem;
+    height: 30rem;
+}
+
+.image--five {
+    width: 25rem;
+    height: 30rem;
+}
 
