@@ -334,7 +334,7 @@ section {
     border-radius: 40px;
     outline: none;
     cursor: pointer;
-    font-size: .5rem;
+    font-size: .8rem;
     font-weight: 600;
     color: var(--text-color1);
     overflow: hidden;

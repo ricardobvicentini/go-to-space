@@ -188,7 +188,6 @@ header .action button i {
 /* Main Content */
 
 .section {
-    border: 1px solid red;
     position: relative;
     padding: 5rem 6.25rem;
     color: var(--text-color1);
@@ -200,6 +199,7 @@ header .action button i {
 .wrapper {
     position: relative;
     width: 90vw;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,7 +213,6 @@ header .action button i {
 
 .wrapper__content {
     /* width: 71.8rem; */
-    border: 1px solid red;
     position: relative;
     width: 95%;
     display: flex;
@@ -222,13 +221,11 @@ header .action button i {
 }
 
 .wrapper__content__image {
-    border: 1px solid red;
     position: relative;
     overflow: hidden;
 }
 
 .wrapper__content__image > img {
-    border: 1px solid red;
     position: absolute;
     top: 0;
     left: 0;
@@ -244,7 +241,6 @@ header .action button i {
 }
 
 .wrapper__content__text {
-    border: 1px solid red;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     padding: 2.5rem;
@@ -292,5 +288,30 @@ header .action button i {
 .image--five {
     width: 25rem;
     height: 30rem;
+}
+
+.image--six {
+    width: 40rem;
+    height: 40rem;
+}
+
+.section--six {
+    height: 100vh;
+}
+
+.wrapper--six {
+    margin-top: 0;
+}
+
+.content--six {
+    position: relative;
+    height: 70%;
+}
+
+.text--six {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
