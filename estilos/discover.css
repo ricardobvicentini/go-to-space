@@ -189,17 +189,36 @@ header .action button i {
 
 .section {
     position: relative;
-    padding: 5rem 6.25rem;
+    height: calc(100vh - 8rem);
+    padding-inline: 6.25rem;
     color: var(--text-color1);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+
+h2 {
+    font-size: clamp(2rem, 0.0217rem + 2.7174vw, 3.5rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 0.4130rem + 1.6304vw, 2.5rem);
+}
+
+h4 {
+    font-size: clamp(1.2rem, 0.6087rem + 1.0870vw, 2rem);
+}
+
+p {
+    font-size: clamp(1rem, 0.8043rem + 0.5435vw, 1.5rem);
 }
 
 .wrapper {
     position: relative;
     width: 90vw;
-    margin: auto;
+    height: 80vh;
+    /* margin-inline: auto; */
+    margin-block: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,7 +226,7 @@ header .action button i {
 }
 
 .wrapper__title {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     margin-bottom: 3.1rem;
 }
 
@@ -225,7 +244,7 @@ header .action button i {
     overflow: hidden;
 }
 
-.wrapper__content__image > img {
+.wrapper__content__image img {
     position: absolute;
     top: 0;
     left: 0;
@@ -233,11 +252,6 @@ header .action button i {
     height: 100%;
     object-fit: cover;
     z-index: 100;
-}
-
-.image--one {
-    width: 70rem;
-    height: 30rem;
 }
 
 .wrapper__content__text {
@@ -252,13 +266,8 @@ header .action button i {
 }
 
 .wrapper__content__text h3 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     margin-bottom: 0.625rem;
-}
-
-.image--two {
-    width: 45rem;
-    height: 25rem;
 }
 
 .wrapper__content__info {
@@ -267,7 +276,7 @@ header .action button i {
 }
 
 .wrapper__content__info h4 {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     margin-bottom: 0.625rem;
 }
 
@@ -275,14 +284,26 @@ header .action button i {
     margin-bottom: 2rem;
 }
 
-.image--three {
+/* Images */
+
+.image--one {
+    width: 70rem;
+    height: 30rem;
+}
+
+.image--two {
     width: 45rem;
     height: 25rem;
 }
 
+.image--three {
+    width: 45rem;
+    height: 45rem;
+}
+
 .image--four {
     width: 30rem;
-    height: 30rem;
+    height: 40rem;
 }
 
 .image--five {
@@ -291,12 +312,12 @@ header .action button i {
 }
 
 .image--six {
-    width: 40rem;
-    height: 40rem;
+    width: 60rem;
+    height: 35rem;
 }
 
 .section--six {
-    height: 100vh;
+    height: calc(100vh - 3vw);
 }
 
 .wrapper--six {
@@ -309,9 +330,60 @@ header .action button i {
 }
 
 .text--six {
+    width: 50rem;
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
 }
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding-block: 2.5vw;
+}
+
+footer a {
+    color: var(--text-color1);
+    position: relative;
+    /* overflow: hidden; */
+    transition: 300ms ease;
+}
+
+footer a::before {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid var(--hl-color1);
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    transition: 300ms right ease;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid var(--hl-color1);
+    bottom: 0;
+    right: 0;
+    left: 100%;
+    transition: 300ms left ease;
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--hl-color1);
+}
+
+footer a:hover::before,
+footer a:focus::before {
+    right: 50%;
+}
+
+footer a:hover::after,
+footer a:focus::after {
+    left: 50%;
+}
+
+
 

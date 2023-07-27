@@ -47,3 +47,21 @@ const appearOnShow = new IntersectionObserver(entries => {
 popers.forEach(poper => {
     appearOnShow.observe(poper)
 })
+
+/* Scroll Reveal */
+
+ScrollReveal({
+    reset: true,
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+});
+
+ScrollReveal().reveal('.title--one', {delay: 600, origin: 'left'});
+ScrollReveal().reveal('.image--one', {delay: 700, origin: 'bottom'});
+ScrollReveal().reveal('.text--one', {delay: 800, origin: 'right'});
+ScrollReveal().reveal('.title--two', {delay: 600, origin: 'top'});
+ScrollReveal().reveal('.image--two', {delay: 700, origin: 'left'});
+ScrollReveal().reveal('.info--two', {delay: 800, origin: 'right'});
+ScrollReveal().reveal('.image--three', {delay: 700, origin: 'left'});
+ScrollReveal().reveal('.info--three', {delay: 800, origin: 'right'});
