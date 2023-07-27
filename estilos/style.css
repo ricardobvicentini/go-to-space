@@ -323,8 +323,8 @@ header .action button i {
 .right-side {
     position: absolute;
     top: 50%;
-    right: -50%;
-    transform: translateY(-50%);
+    right: -60%;
+    transform: translateY(-60%);
     animation: from-right 1100ms 500ms forwards;
 }
 
@@ -360,7 +360,6 @@ header .action button i {
     border: 1px solid var(--hl-color1);
     border-right: none;
     border-radius: 5px 0 0 5px;
-    filter: blur(10px);
     z-index: -1;
     transition: 500ms;
 }
@@ -368,7 +367,6 @@ header .action button i {
 .right-side a:hover::before,
 .right-side a:focus::before {
     right: 0;
-    filter: blur(0);
 }
 
 .right-side a.show {

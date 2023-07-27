@@ -52,16 +52,36 @@ popers.forEach(poper => {
 
 ScrollReveal({
     reset: true,
-    distance: '60px',
+    distance: '65px',
     duration: 2500,
-    delay: 400
+    delay: 300
 });
 
-ScrollReveal().reveal('.title--one', {delay: 600, origin: 'left'});
-ScrollReveal().reveal('.image--one', {delay: 700, origin: 'bottom'});
-ScrollReveal().reveal('.text--one', {delay: 800, origin: 'right'});
-ScrollReveal().reveal('.title--two', {delay: 600, origin: 'top'});
-ScrollReveal().reveal('.image--two', {delay: 700, origin: 'left'});
-ScrollReveal().reveal('.info--two', {delay: 800, origin: 'right'});
-ScrollReveal().reveal('.image--three', {delay: 700, origin: 'left'});
-ScrollReveal().reveal('.info--three', {delay: 800, origin: 'right'});
+ScrollReveal().reveal('.title--one', {delay: 500, origin: 'left'});
+ScrollReveal().reveal('.image--one', {delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.text--one', {delay: 700, origin: 'right'});
+ScrollReveal().reveal('.title--two', {delay: 500, origin: 'top'});
+ScrollReveal().reveal('.image--two', {delay: 600, origin: 'left'});
+ScrollReveal().reveal('.info--two', {delay: 700, origin: 'right'});
+ScrollReveal().reveal('.image--three', {delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.info--three', {delay: 700, origin: 'top'});
+ScrollReveal().reveal('.image--four', {delay: 600, origin: 'left'});
+ScrollReveal().reveal('.info--four', {delay: 600, origin: 'right'});
+ScrollReveal().reveal('.image--five', {delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.info--five', {delay: 600, origin: 'top'});
+ScrollReveal().reveal('.title--six', {delay: 600, origin: 'top'});
+ScrollReveal().reveal('.text--six', {delay: 600, origin: 'bottom'});
+
+/* Image six appear */
+
+const imgs = document.querySelectorAll('.image--six');
+
+const appearOnDisplay = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("display", entry.isIntersecting)
+    })
+})
+
+imgs.forEach(img => {
+    appearOnDisplay.observe(img)
+})

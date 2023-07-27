@@ -275,6 +275,10 @@ p {
     margin-left: 3.1rem;
 }
 
+.info--three {
+    margin-right: 3.1rem;
+}
+
 .wrapper__content__info h4 {
     /* font-size: 1.2rem; */
     margin-bottom: 0.625rem;
@@ -314,6 +318,14 @@ p {
 .image--six {
     width: 60rem;
     height: 35rem;
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 800ms ease-in;
+}
+
+.image--six.display {
+    opacity: 1;
+    filter: blur(0);
 }
 
 .section--six {
@@ -340,13 +352,12 @@ p {
 footer {
     width: 100%;
     text-align: center;
-    padding-block: 2.5vw;
+    padding-block: 2vw;
 }
 
 footer a {
     color: var(--text-color1);
     position: relative;
-    /* overflow: hidden; */
     transition: 300ms ease;
 }
 
