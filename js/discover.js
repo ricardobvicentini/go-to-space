@@ -52,9 +52,9 @@ popers.forEach(poper => {
 
 ScrollReveal({
     reset: true,
-    distance: '65px',
+    distance: '60px',
     duration: 2500,
-    delay: 300
+    delay: 200
 });
 
 ScrollReveal().reveal('.title--one', {delay: 500, origin: 'left'});
@@ -70,7 +70,7 @@ ScrollReveal().reveal('.info--four', {delay: 600, origin: 'right'});
 ScrollReveal().reveal('.image--five', {delay: 600, origin: 'bottom'});
 ScrollReveal().reveal('.info--five', {delay: 600, origin: 'top'});
 ScrollReveal().reveal('.title--six', {delay: 600, origin: 'top'});
-ScrollReveal().reveal('.text--six', {delay: 600, origin: 'bottom'});
+ScrollReveal().reveal('.info--six', {delay: 500, origin: 'bottom'});
 
 /* Image six appear */
 

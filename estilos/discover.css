@@ -279,6 +279,10 @@ p {
     margin-right: 3.1rem;
 }
 
+.info--five {
+    margin-right: 3.1rem;
+}
+
 .wrapper__content__info h4 {
     /* font-size: 1.2rem; */
     margin-bottom: 0.625rem;
@@ -320,7 +324,7 @@ p {
     height: 35rem;
     opacity: 0;
     filter: blur(15px);
-    transition: all 800ms ease-in;
+    transition: all 600ms 600ms ease-in;
 }
 
 .image--six.display {
@@ -329,24 +333,22 @@ p {
 }
 
 .section--six {
-    height: calc(100vh - 3vw);
-}
-
-.wrapper--six {
-    margin-top: 0;
+    height: calc(100vh - 2vw);
 }
 
 .content--six {
-    position: relative;
     height: 70%;
 }
 
-.text--six {
-    width: 50rem;
+.info--six {
     position: absolute;
+    width: 40rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem;
     top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
+    border-radius: 10px;
+    z-index: 200;
 }
 
 footer {
