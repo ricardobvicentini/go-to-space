@@ -189,7 +189,8 @@ header .action button i {
 
 .section {
     position: relative;
-    height: calc(100vh - 8rem);
+    /* height: calc(100vh - 8rem); */
+    height: clamp(37.7rem, 50%, 80vh);
     padding-inline: 6.25rem;
     color: var(--text-color1);
     display: flex;
@@ -202,7 +203,7 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.5rem, 0.4130rem + 1.6304vw, 2.5rem);
+    font-size: clamp(1.5rem, 1.6304vw, 2.5rem);
 }
 
 h4 {
@@ -210,14 +211,13 @@ h4 {
 }
 
 p {
-    font-size: clamp(1rem, 0.8043rem + 0.5435vw, 1.5rem);
+    font-size: clamp(1rem, 1.4vw, 1.8rem);
 }
 
 .wrapper {
     position: relative;
     width: 90vw;
     height: 80vh;
-    /* margin-inline: auto; */
     margin-block: 0;
     display: flex;
     flex-direction: column;
@@ -233,7 +233,8 @@ p {
 .wrapper__content {
     /* width: 71.8rem; */
     position: relative;
-    width: 95%;
+    /* width: 95%; */
+    width: clamp(20rem, 80vw, 71.8rem);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,7 +259,9 @@ p {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     padding: 2.5rem;
-    max-width: 55%;
+    /* max-width: 55%; */
+    width: clamp(8rem, 50vw, 70rem);
+    height: clamp(8rem, 40vw, 50rem);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     z-index: 200;
@@ -295,8 +298,8 @@ p {
 /* Images */
 
 .image--one {
-    width: 70rem;
-    height: 30rem;
+    width: clamp(6.25rem, 70vw, 70rem);
+    height: clamp(4rem, 40vw, 30rem);
 }
 
 .image--two {
