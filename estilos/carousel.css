@@ -13,3 +13,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  /* colors */
+  --pr-bg1: #081b29;
+  --nav-bl: #69c5fa18;
+  --sc-bg: #111111;
+  --hl-color1: #69c5fa;
+  --hl-color2: #00d9ff;
+  --text-color1: #f4f4f4;
+  --text-color2: #616161;
+}
+
+body {
+  max-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  position: relative;
+  scroll-behavior: smooth;
+}
