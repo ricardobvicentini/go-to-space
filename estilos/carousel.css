@@ -13,6 +13,9 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  & img {
+    display: block;
+  }
 }
 
 :root {
@@ -26,5 +29,26 @@ body {
   font-family: 'Poppins', sans-serif;
   & header {
     position: fixed;
+    width: min(1200 px, 90vw);
+    height: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr calc(var(--w-column) * 3);
+    gap: 10%;
+    align-items: center;
+    z-index: 10;
+    & .logo {
+      & img {
+        width: 100px;
+        aspect-ratio: 1;
+      }
+    }
+    & nav {
+      & ul {
+        display: grid;
+        grid-template-columns: repeat(3, var(--w-column));
+      }
+    }
   }
 }
