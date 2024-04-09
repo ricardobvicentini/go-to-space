@@ -69,24 +69,96 @@ body {
           position: absolute;
           width: 50%; /* ? */
           top: 50%;
+          left: 10%;
           transform: translateY(-50%);
           & img {
-            width: 100%;
+            width: 80%;
           }
           &::before {
             content: '';
             position: absolute;
             background-color: #0b0b0b;
-            width: 100%;
+            width: 80%;
             height: 100px;
-            top: 110%;
+            top: 100%;
             border-radius: 100vw;
             filter: blur(50px);
           }
         }
         & .content {
+          position: absolute;
+          width: 70%;
+          height: 100%;
+          right: var(--w-column);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: end;
+          gap: 20px;
+          z-index: 20;
+          & h2 {
+            font-size: 6em;
+            line-height: 1em;
+          }
+          & .description {
+            color: #fff8;
+            max-width: 400px;
+            font-size: small;
+            text-align: right;
+          }
+          & .more {
+            display: grid;
+            grid-template-columns: repeat(2, 120px);
+            grid-template-rows: 35px;
+            gap: 20px;
+            & button {
+              border-radius: 30px;
+              font-family: 'Poppins', sans-serif;
+              text-transform: uppercase;
+              color: #fff;
+              background-color: transparent;
+              border: none;
+              &:nth-child(1) {
+                background-image: linear-gradient(to right, #69c5fa, #00d9ff);
+              }
+              &:nth-child(2) {
+                border: 2px solid transparent;
+                background: linear-gradient(#242745, #242745) padding-box,
+                  linear-gradient(to right, #69c5fa, #00d9ff) border-box;
+              }
+            }
+          }
         }
       }
+    }
+    & .arrows {
+      width: min(1200px, 90vw);
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, 52px);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 100;
+      & button {
+        width: 50px;
+        height: 50px;
+        break-before: 50%; /* ? */
+        border: 1px solid #659cdf55;
+        background-color: #232442;
+        color: #fff7;
+        border-radius: 100vw;
+        font-family: monospace;
+        font-size: large;
+        pointer-events: auto;
+        &:hover {
+          border: 1px solid #659cdf;
+          color: #fff;
+        }
+      }
+    }
+    & .indicators {
     }
   }
 }
