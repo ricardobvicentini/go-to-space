@@ -159,6 +159,49 @@ body {
       }
     }
     & .indicators {
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1200px, 90vw);
+      height: var(--w-column);
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      gap: 10px;
+      pointer-events: none;
+      & .number {
+        font-size: 7vw;
+      }
+      & ul {
+        display: flex;
+        gap: 10px;
+        & li {
+          width: 50px;
+          height: 5px;
+          background-color: #659cdf;
+          border-radius: 10px;
+          pointer-events: auto;
+          cursor: pointer;
+          transition: 500ms;
+          &.active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* animation */
+body {
+  & .carousel {
+    --calculation: 1;
+    & .list {
+      & .item {
+        /* transform: translateX(50vw);
+        scale: 0.5; */
+      }
     }
   }
 }
