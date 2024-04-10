@@ -69,10 +69,10 @@ body {
           position: absolute;
           width: 50%; /* ? */
           top: 50%;
-          left: 10%;
+          left: 20%;
           transform: translateY(-50%);
           & img {
-            width: 80%;
+            width: 60%;
           }
           &::before {
             content: '';
@@ -198,9 +198,25 @@ body {
   & .carousel {
     --calculation: 1;
     & .list {
-      & .item {
+      & .item.active {
         /* transform: translateX(50vw);
         scale: 0.5; */
+        & figure {
+          & img {
+            transform: translateX(-25vw);
+            scale: 1.5;
+            filter: blur(5px);
+          }
+        }
+      }
+      & .item.backimg {
+        & figure {
+          & img {
+            transform: translateX(50vw);
+            scale: 0.5;
+            filter: blur(5px);
+          }
+        }
       }
     }
   }
