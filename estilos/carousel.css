@@ -196,25 +196,43 @@ body {
 /* animation */
 body {
   & .carousel {
-    --calculation: 1;
+    --calculation: -1;
     & .list {
-      & .item.active {
-        /* transform: translateX(50vw);
-        scale: 0.5; */
-        & figure {
-          & img {
-            transform: translateX(-25vw);
-            scale: 1.5;
-            filter: blur(5px);
+      & .item {
+        transform: translateX(calc(100vw * var(--calculation)));
+        opacity: 0;
+        transition: transform 500ms, opacity 500ms;
+        & .content {
+          & .category,
+          h2,
+          .description,
+          .more {
+            transform: translateX(calc(200px * var(--calculation)));
+            opacity: 0;
+            transition: transform 700ms, opacity 700ms;
+            transition-delay: 300ms;
+          }
+          & h2 {
+            transition-delay: 500ms;
+          }
+          & .description {
+            transition-delay: 700ms;
+          }
+          & .more {
+            transition-delay: 900ms;
           }
         }
-      }
-      & .item.backimg {
-        & figure {
-          & img {
-            transform: translateX(50vw);
-            scale: 0.5;
-            filter: blur(5px);
+        &.active {
+          opacity: 1;
+          transform: translateX(0);
+          & .content {
+            & .category,
+            h2,
+            .description,
+            .more {
+              transform: translateX(0);
+              opacity: 1;
+            }
           }
         }
       }
