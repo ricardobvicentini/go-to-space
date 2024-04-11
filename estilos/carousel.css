@@ -73,16 +73,16 @@ body {
           transform: translateY(-50%);
           & img {
             width: 60%;
-          }
-          &::before {
-            content: '';
-            position: absolute;
-            background-color: #0b0b0b;
-            width: 80%;
-            height: 100px;
-            top: 100%;
-            border-radius: 100vw;
-            filter: blur(50px);
+            /* &::before {
+              content: '';
+              position: absolute;
+              background-color: #0b0b0b;
+              width: 80%;
+              height: 100px;
+              top: 100%;
+              border-radius: 100vw;
+              filter: blur(50px);
+            } */
           }
         }
         & .content {
