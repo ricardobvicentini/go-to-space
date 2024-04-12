@@ -100,13 +100,13 @@ body {
     }
 
     & .list {
-      border: 1px solid red;
       position: relative;
       width: min(1200px, 90vw);
       height: 100%;
       margin: auto;
     }
     & .item {
+      border: 1px solid red;
       position: absolute;
       inset: 0;
       /* & figure {
@@ -130,10 +130,12 @@ body {
           }
         } */
       & .content {
+        border: 1px solid red;
         position: absolute;
-        width: 70%;
+        width: 90%;
         height: 100%;
-        right: var(--w-column);
+        /* right: var(--w-column); */
+        left: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -205,8 +207,9 @@ body {
     }
   }
   & .indicators {
+    border: 1px solid red;
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     width: min(1200px, 90vw);
