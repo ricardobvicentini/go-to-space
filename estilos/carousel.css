@@ -58,12 +58,14 @@ body {
     background-image: radial-gradient(#2b2e4f, #111126);
     height: 100vh;
     overflow: hidden; /* ? */
+
     & figure {
       position: absolute;
       width: 30%;
       top: 50%;
       left: 25%;
       transform: translateY(-50%);
+      pointer-events: none;
       & img {
         width: 100%;
       }
@@ -78,6 +80,25 @@ body {
         filter: blur(50px);
       }
     }
+
+    /** Image Carousel */
+
+    & .img-1 {
+      filter: blur(0);
+      opacity: 1;
+    }
+
+    & .img-2 {
+      transform: translate(100%, -50%) scale(0.5);
+      filter: blur(15px);
+    }
+
+    & .img-3 {
+      transform: translate(-150%, -50%) scale(1.5);
+      filter: blur(15px);
+      opacity: 1;
+    }
+
     & .list {
       border: 1px solid red;
       position: relative;
