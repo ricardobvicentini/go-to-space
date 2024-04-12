@@ -10,6 +10,7 @@ let active = 2;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
 
+/* Slider function */
 const setSlider = () => {
   let itemActiveOld = carousel.querySelector('.list .item.active');
   if (itemActiveOld) {
@@ -25,12 +26,22 @@ const setSlider = () => {
   indicator.querySelector('.number').innerText = '0' + (active + 1);
 };
 
-/* setSlider(); */
+/* Show Image function */
+
+const showImage = (direction) => {
+  let imgWrapper = document.querySelector('.images-wrapper');
+  let images = document.querySelectorAll('.helmet-img');
+  if (direction === 'next') {
+    console.log(items[0]);
+    /* imgWrapper.appendChild(images[0]); */
+  }
+};
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;
   carousel.style.setProperty('--calculation', 1);
   setSlider();
+  showImage('next');
 };
 
 prevBtn.onclick = () => {
