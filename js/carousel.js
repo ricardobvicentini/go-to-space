@@ -32,8 +32,7 @@ const showImage = (direction) => {
   let imgWrapper = document.querySelector('.images-wrapper');
   let images = document.querySelectorAll('.helmet-img');
   if (direction === 'next') {
-    console.log(items[0]);
-    /* imgWrapper.appendChild(images[0]); */
+    imgWrapper.appendChild(images[0]);
   }
 };
 
