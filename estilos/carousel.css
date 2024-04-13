@@ -118,39 +118,20 @@ body {
         }
       }
 
-      /*       & .img-1 {
+      & figure:nth-of-type(1) {
         border: 1px solid red;
         transform: var(--img-1-transform);
         filter: var(--img-1-filter);
         opacity: var(--img-1-opacity);
       }
 
-      & .img-2 {
+      & figure:nth-of-type(2) {
         transform: var(--img-2-transform);
         filter: var(--img-2-filter);
         opacity: var(--img-2-opacity);
       }
 
-      & .img-3 {
-        transform: var(--img-3-transform);
-        filter: var(--img-3-filter);
-        opacity: var(--img-3-opacity);
-      } */
-
-      &:nth-of-type(1) {
-        border: 1px solid red;
-        transform: var(--img-1-transform);
-        filter: var(--img-1-filter);
-        opacity: var(--img-1-opacity);
-      }
-
-      &:nth-of-type(2) {
-        transform: var(--img-2-transform);
-        filter: var(--img-2-filter);
-        opacity: var(--img-2-opacity);
-      }
-
-      &:nth-of-type(3) {
+      & figure:nth-of-type(3) {
         transform: var(--img-3-transform);
         filter: var(--img-3-filter);
         opacity: var(--img-3-opacity);
@@ -301,7 +282,7 @@ body {
 /* animation */
 body {
   & .carousel {
-    --calculation: -1;
+    --calculation: 1;
     & .list {
       & .item {
         transform: translateX(calc(100vw * var(--calculation)));
