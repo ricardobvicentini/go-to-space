@@ -85,7 +85,7 @@ body {
       --img-1-transform: translate(0, -50%) scale(1);
       --img-1-filter: blur(0);
       --img-1-opacity: 1;
-      --img-2-transform: translate(100%, -50%) scale(0.5);
+      --img-2-transform: translate(100%, -50%) scale(0.6);
       --img-2-filter: blur(15px);
       --img-2-opacity: 0.5;
       --img-3-transform: translate(-150%, -50%) scale(1.5);
@@ -119,7 +119,6 @@ body {
       }
 
       & figure:nth-of-type(1) {
-        border: 1px solid red;
         transform: var(--img-1-transform);
         filter: var(--img-1-filter);
         opacity: var(--img-1-opacity);
@@ -139,7 +138,6 @@ body {
     }
 
     & .list {
-      border: 1px solid red;
       position: relative;
       width: min(1200px, 90vw);
       height: 100%;
@@ -283,6 +281,20 @@ body {
 body {
   & .carousel {
     --calculation: 1;
+
+    & .images-wrapper {
+      & figure:nth-of-type(1) {
+        animation: positionImage2 500ms ease-in-out 1 forwards;
+      }
+
+      & figure:nth-of-type(2) {
+        animation: positionImage3 500ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(3) {
+        animation: positionImage1 500ms ease-in-out 1 forwards;
+      }
+    }
+
     & .list {
       & .item {
         transform: translateX(calc(100vw * var(--calculation)));
@@ -323,5 +335,27 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes positionImage2 {
+  from {
+    transform: var(--img-2-transform);
+    filter: var(--img-2-filter);
+    opacity: var(--img-2-opacity);
+  }
+}
+
+@keyframes positionImage3 {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes positionImage1 {
+  from {
+    transform: var(--img-1-transform);
+    filter: var(--img-1-filter);
+    opacity: var(--img-1-opacity);
   }
 }
