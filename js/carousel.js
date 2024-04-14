@@ -6,7 +6,7 @@ const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.list .item');
 const indicator = carousel.querySelector('.indicators');
 const dots = indicator.querySelectorAll('ul li');
-let active = 2;
+let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
 

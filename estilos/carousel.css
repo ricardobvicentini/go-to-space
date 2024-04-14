@@ -59,13 +59,13 @@ body {
     overflow: hidden; /* ? */
     /** Image Carousel */
     & .images-wrapper {
-      --img-1-transform: translate(0, -50%) scale(1);
+      --img-1-transform: translate(-10%, -50%) scale(1);
       --img-1-filter: blur(0);
       --img-1-opacity: 1;
-      --img-2-transform: translate(100%, -50%) scale(0.6);
+      --img-2-transform: translate(90%, -50%) scale(0.6);
       --img-2-filter: blur(15px);
       --img-2-opacity: 0.5;
-      --img-3-transform: translate(-150%, -50%) scale(1.5);
+      --img-3-transform: translate(-160%, -50%) scale(1.5);
       --img-3-filter: blur(15px);
       --img-3-opacity: 0.8;
 
@@ -288,21 +288,6 @@ body {
     }
   }
 }
-
-/* Images animation */
-
-/* .img-animation {
-  .images-wrapper figure:nth-of-type(1) {
-    animation: positionImage2 500ms ease-in-out 1 forwards;
-  }
-
-  .images-wrapper figure:nth-of-type(2) {
-    animation: positionImage3 500ms ease-in-out 1 forwards;
-  }
-  .images-wrapper figure:nth-of-type(3) {
-    animation: positionImage1 500ms ease-in-out 1 forwards;
-  }
-} */
 
 /* Keyframes */
 
