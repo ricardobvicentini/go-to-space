@@ -6,6 +6,7 @@ const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.list .item');
 const indicator = carousel.querySelector('.indicators');
 const dots = indicator.querySelectorAll('ul li');
+let images = document.querySelectorAll('.helmet-img');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
@@ -13,10 +14,13 @@ let lastPosition = items.length - 1;
 /* Slider function */
 const setSlider = () => {
   let itemActiveOld = carousel.querySelector('.list .item.active');
-  if (itemActiveOld) {
+  let imageActiveOld = document.querySelector('.helmet-img.active');
+  if (itemActiveOld && imageActiveOld) {
     itemActiveOld.classList.remove('active');
+    imageActiveOld.classList.remove('active');
   }
   items[active].classList.add('active');
+  images[active].classList.add('active');
 
   let dotActiveOld = indicator.querySelector('li.active');
   if (dotActiveOld) {
@@ -30,10 +34,10 @@ const setSlider = () => {
 
 const showImage = (direction) => {
   let imgWrapper = document.querySelector('.images-wrapper');
-  let images = document.querySelectorAll('.helmet-img');
+  let images = document.querySelectorAll('.helmet-img'); /*  */
   if (direction === 'next') {
     imgWrapper.appendChild(images[0]);
-    imgWrapper.classList.add('next');
+    imgWrapper.classList.add('next'); /*  */
   }
 };
 
