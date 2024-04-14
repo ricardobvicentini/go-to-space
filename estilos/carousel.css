@@ -228,12 +228,12 @@ body {
   }
 }
 
-/* animation */
+/* animations */
 body {
   & .carousel {
     --calculation: 1;
 
-    & .images-wrapper {
+    & .images-wrapper.next {
       & figure:nth-of-type(1) {
         animation: positionImage2 500ms ease-in-out 1 forwards;
       }
@@ -288,6 +288,21 @@ body {
     }
   }
 }
+
+/* Images animation */
+
+/* .img-animation {
+  .images-wrapper figure:nth-of-type(1) {
+    animation: positionImage2 500ms ease-in-out 1 forwards;
+  }
+
+  .images-wrapper figure:nth-of-type(2) {
+    animation: positionImage3 500ms ease-in-out 1 forwards;
+  }
+  .images-wrapper figure:nth-of-type(3) {
+    animation: positionImage1 500ms ease-in-out 1 forwards;
+  }
+} */
 
 /* Keyframes */
 
