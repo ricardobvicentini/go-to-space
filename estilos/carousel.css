@@ -69,7 +69,6 @@ body {
       --img-3-filter: blur(15px);
       --img-3-opacity: 0.8;
 
-      border: 2px solid purple;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -311,4 +310,8 @@ body {
     filter: var(--img-1-filter);
     opacity: var(--img-1-opacity);
   }
+}
+
+.images-wrapper .figure:nth-of-type(var(--img-position)) {
+  border: 2px solid red;
 }
