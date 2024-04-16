@@ -231,12 +231,10 @@ body {
 body {
   & .carousel {
     --calculation: 1;
-
     & .images-wrapper.next {
       & figure:nth-of-type(1) {
         animation: positionImage2 700ms ease-in-out 1 forwards;
       }
-
       & figure:nth-of-type(2) {
         animation: positionImage3 700ms ease-in-out 1 forwards;
       }
@@ -244,7 +242,6 @@ body {
         animation: positionImage1 700ms ease-in-out 1 forwards;
       }
     }
-
     & .images-wrapper.prev {
       & figure:nth-of-type(1) {
         animation: prevPosImage3 700ms ease-in-out 1 forwards;
