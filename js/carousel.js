@@ -40,6 +40,10 @@ const showImage = (direction) => {
   if (direction === 'next') {
     imgWrapper.appendChild(images[0]);
     imgWrapper.classList.add('next');
+  } else {
+    let positionLast = images.length - 1;
+    imgWrapper.prepend(images[lastPosition]);
+    imgWrapper.classList.add('prev');
   }
 };
 
@@ -55,6 +59,8 @@ prevBtn.onclick = () => {
   active = active - 1 < firstPosition ? lastPosition : active - 1;
   carousel.style.setProperty('--calculation', -1);
   setSlider('prev');
+  showImage('prev');
+  console.log(images[active]);
 };
 
 dots.forEach((item, position) => {
