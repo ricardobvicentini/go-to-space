@@ -334,8 +334,7 @@ body {
 }
 @keyframes prevPosImage2 {
   from {
-    /* transform: var(--img-2-transform); */
-    transform: translate(-200%, -50%);
+    transform: translate(-250%, -50%) scale(2);
     filter: var(--img-2-filter);
     opacity: var(--img-2-opacity);
   }
