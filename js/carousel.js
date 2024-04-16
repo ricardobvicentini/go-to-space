@@ -37,6 +37,7 @@ const setSlider = () => {
 const showImage = (direction) => {
   let imgWrapper = document.querySelector('.images-wrapper');
   let images = document.querySelectorAll('.helmet-img');
+  imgWrapper.classList.remove('prev', 'next');
   if (direction === 'next') {
     imgWrapper.appendChild(images[0]);
     imgWrapper.classList.add('next');
@@ -67,6 +68,5 @@ dots.forEach((item, position) => {
   item.onclick = () => {
     active = position;
     setSlider();
-    console.log(images[active]);
   };
 });
