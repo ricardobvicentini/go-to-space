@@ -234,14 +234,26 @@ body {
 
     & .images-wrapper.next {
       & figure:nth-of-type(1) {
-        animation: positionImage2 500ms ease-in-out 1 forwards;
+        animation: positionImage2 700ms ease-in-out 1 forwards;
       }
 
       & figure:nth-of-type(2) {
-        animation: positionImage3 500ms ease-in-out 1 forwards;
+        animation: positionImage3 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(3) {
-        animation: positionImage1 500ms ease-in-out 1 forwards;
+        animation: positionImage1 700ms ease-in-out 1 forwards;
+      }
+    }
+
+    & .images-wrapper.prev {
+      & figure:nth-of-type(1) {
+        animation: prevPosImage3 700ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(2) {
+        animation: prevPosImage1 700ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(3) {
+        animation: prevPosImage2 700ms ease-in-out 1 forwards;
       }
     }
 
@@ -289,7 +301,7 @@ body {
 }
 
 /* Keyframes */
-
+/* Next */
 @keyframes positionImage2 {
   from {
     transform: var(--img-2-transform);
@@ -312,6 +324,26 @@ body {
   }
 }
 
-.images-wrapper .figure:nth-of-type(var(--img-position)) {
-  border: 2px solid red;
+/* prev */
+@keyframes prevPosImage1 {
+  from {
+    transform: var(--img-1-transform);
+    filter: var(--img-1-filter);
+    opacity: var(--img-1-opacity);
+  }
+}
+@keyframes prevPosImage2 {
+  from {
+    /* transform: var(--img-2-transform); */
+    transform: translate(-200%, -50%);
+    filter: var(--img-2-filter);
+    opacity: var(--img-2-opacity);
+  }
+}
+@keyframes prevPosImage3 {
+  from {
+    transform: var(--img-3-transform);
+    filter: var(--img-3-filter);
+    opacity: var(--img-3-opacity);
+  }
 }
