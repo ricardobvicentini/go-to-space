@@ -6,6 +6,7 @@ const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.list .item');
 const indicator = carousel.querySelector('.indicators');
 const dots = indicator.querySelectorAll('ul li');
+let imgWrapper = document.querySelector('.images-wrapper');
 let images = document.querySelectorAll('.helmet-img');
 let active = 0;
 let firstPosition = 0;
@@ -15,14 +16,11 @@ let autoPlay;
 /* Slider function */
 const setSlider = () => {
   let itemActiveOld = carousel.querySelector('.list .item.active');
-  let imageActiveOld = document.querySelector('.helmet-img.active');
 
-  if (itemActiveOld && imageActiveOld) {
+  if (itemActiveOld) {
     itemActiveOld.classList.remove('active');
-    imageActiveOld.classList.remove('active');
   }
   items[active].classList.add('active');
-  images[active].classList.add('active');
 
   let dotActiveOld = indicator.querySelector('li.active');
   if (dotActiveOld) {
@@ -35,7 +33,6 @@ const setSlider = () => {
 };
 
 /* Show Image function */
-
 const showImage = (direction) => {
   let imgWrapper = document.querySelector('.images-wrapper');
   let images = document.querySelectorAll('.helmet-img');
@@ -59,14 +56,13 @@ const startAutoPlay = () => {
     nextBtn.click();
   }, 5000);
 };
-/* startAutoPlay(); */
+startAutoPlay();
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;
   carousel.style.setProperty('--calculation', 1);
   setSlider('next');
   showImage('next');
-  console.log(images[active]);
 };
 
 prevBtn.onclick = () => {
@@ -74,12 +70,12 @@ prevBtn.onclick = () => {
   carousel.style.setProperty('--calculation', -1);
   setSlider('prev');
   showImage('prev');
-  console.log(images[active]);
 };
 
 dots.forEach((item, position) => {
   item.onclick = () => {
     active = position;
     setSlider();
+    console.log(images[active]);
   };
 });
