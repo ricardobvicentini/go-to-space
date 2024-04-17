@@ -10,6 +10,7 @@ let images = document.querySelectorAll('.helmet-img');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
+let autoPlay;
 
 /* Slider function */
 const setSlider = () => {
@@ -30,6 +31,7 @@ const setSlider = () => {
 
   dots[active].classList.add('active');
   indicator.querySelector('.number').innerText = '0' + (active + 1);
+  startAutoPlay();
 };
 
 /* Show Image function */
@@ -46,7 +48,18 @@ const showImage = (direction) => {
     imgWrapper.prepend(images[lastPosition]);
     imgWrapper.classList.add('prev');
   }
+  startAutoPlay();
 };
+
+/* Autoplay function */
+
+const startAutoPlay = () => {
+  clearInterval(autoPlay);
+  autoPlay = setInterval(() => {
+    nextBtn.click();
+  }, 5000);
+};
+/* startAutoPlay(); */
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;
