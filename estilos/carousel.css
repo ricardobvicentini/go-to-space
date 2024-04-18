@@ -65,9 +65,15 @@ body {
       --img-2-transform: translate(90%, -50%) scale(0.6);
       --img-2-filter: blur(15px);
       --img-2-opacity: 0.5;
-      --img-3-transform: translate(-160%, -50%) scale(1.5);
-      --img-3-filter: blur(15px);
-      --img-3-opacity: 0.8;
+      --img-3-transform: translate(140%, -50%) scale(0.1);
+      --img-3-filter: blur(30px);
+      --img-3-opacity: 0.3;
+      --img-4-transform: translate(140%, -50%) scale(0.1);
+      --img-4-filter: blur(30px);
+      --img-4-opacity: 0;
+      --img-5-transform: translate(-160%, -50%) scale(1.5);
+      --img-5-filter: blur(15px);
+      --img-5-opacity: 0.8;
 
       position: absolute;
       width: 100%;
@@ -106,6 +112,16 @@ body {
         transform: var(--img-3-transform);
         filter: var(--img-3-filter);
         opacity: var(--img-3-opacity);
+      }
+      & figure:nth-of-type(4) {
+        transform: var(--img-4-transform);
+        filter: var(--img-4-filter);
+        opacity: var(--img-4-opacity);
+      }
+      & figure:nth-of-type(5) {
+        transform: var(--img-5-transform);
+        filter: var(--img-5-filter);
+        opacity: var(--img-5-opacity);
       }
     }
     & .list {
@@ -240,6 +256,12 @@ body {
         animation: positionImage3 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(3) {
+        animation: positionImage2 700ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(4) {
+        animation: positionImage3 700ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(5) {
         animation: positionImage1 700ms ease-in-out 1 forwards;
       }
     }
@@ -319,6 +341,22 @@ body {
     transform: var(--img-1-transform);
     filter: var(--img-1-filter);
     opacity: var(--img-1-opacity);
+  }
+}
+
+@keyframes positionImage4 {
+  from {
+    transform: var(--img-4-transform);
+    filter: var(--img-4-filter);
+    opacity: var(--img-4-opacity);
+  }
+}
+
+@keyframes positionImage5 {
+  from {
+    transform: var(--img-5-transform);
+    filter: var(--img-5-filter);
+    opacity: var(--img-5-opacity);
   }
 }
 
