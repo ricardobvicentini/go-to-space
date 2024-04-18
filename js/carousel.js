@@ -5,7 +5,7 @@ const nextBtn = document.querySelector('.next');
 const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.list .item');
 const indicator = carousel.querySelector('.indicators');
-const dots = indicator.querySelectorAll('ul li');
+/* const dots = indicator.querySelectorAll('ul li'); */
 let imgWrapper = document.querySelector('.images-wrapper');
 let images = document.querySelectorAll('.helmet-img');
 let active = 0;
@@ -22,14 +22,14 @@ const setSlider = () => {
   }
   items[active].classList.add('active');
 
-  let dotActiveOld = indicator.querySelector('li.active');
+  /* let dotActiveOld = indicator.querySelector('li.active');
   if (dotActiveOld) {
     dotActiveOld.classList.remove('active');
   }
 
   dots[active].classList.add('active');
-  indicator.querySelector('.number').innerText = '0' + (active + 1);
-  startAutoPlay();
+  indicator.querySelector('.number').innerText = '0' + (active + 1); */
+  /* startAutoPlay(); */
 };
 
 /* Show Image function */
@@ -45,7 +45,7 @@ const showImage = (direction) => {
     imgWrapper.prepend(images[lastPosition]);
     imgWrapper.classList.add('prev');
   }
-  startAutoPlay();
+  /* startAutoPlay(); */
 };
 
 /* Autoplay function */
@@ -56,7 +56,7 @@ const startAutoPlay = () => {
     nextBtn.click();
   }, 5000);
 };
-startAutoPlay();
+/* startAutoPlay(); */
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;
@@ -72,10 +72,10 @@ prevBtn.onclick = () => {
   showImage('prev');
 };
 
-dots.forEach((item, position) => {
+/* dots.forEach((item, position) => {
   item.onclick = () => {
     active = position;
     setSlider();
     console.log(images[active]);
   };
-});
+}); */
