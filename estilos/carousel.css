@@ -256,10 +256,10 @@ body {
         animation: positionImage3 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(3) {
-        animation: positionImage2 700ms ease-in-out 1 forwards;
+        animation: positionImage4 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(4) {
-        animation: positionImage3 700ms ease-in-out 1 forwards;
+        animation: positionImage5 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(5) {
         animation: positionImage1 700ms ease-in-out 1 forwards;
@@ -267,13 +267,19 @@ body {
     }
     & .images-wrapper.prev {
       & figure:nth-of-type(1) {
-        animation: prevPosImage3 700ms ease-in-out 1 forwards;
+        animation: positionImage5 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(2) {
-        animation: prevPosImage1 700ms ease-in-out 1 forwards;
+        animation: positionImage1 700ms ease-in-out 1 forwards;
       }
       & figure:nth-of-type(3) {
-        animation: prevPosImage2 700ms ease-in-out 1 forwards;
+        animation: positionImage2 700ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(4) {
+        animation: positionImage3 700ms ease-in-out 1 forwards;
+      }
+      & figure:nth-of-type(5) {
+        animation: positionImage4 700ms ease-in-out 1 forwards;
       }
     }
 
@@ -332,7 +338,9 @@ body {
 
 @keyframes positionImage3 {
   from {
-    opacity: 0;
+    transform: var(--img-3-transform);
+    filter: var(--img-3-filter);
+    opacity: var(--img-3-opacity);
   }
 }
 
@@ -368,17 +376,35 @@ body {
     opacity: var(--img-1-opacity);
   }
 }
+
 @keyframes prevPosImage2 {
   from {
-    transform: translate(-250%, -50%) scale(2);
+    transform: var(--img-2-transform);
     filter: var(--img-2-filter);
     opacity: var(--img-2-opacity);
   }
 }
+
 @keyframes prevPosImage3 {
   from {
     transform: var(--img-3-transform);
     filter: var(--img-3-filter);
     opacity: var(--img-3-opacity);
+  }
+}
+
+@keyframes positionImage4 {
+  from {
+    transform: var(--img-4-transform);
+    filter: var(--img-4-filter);
+    opacity: var(--img-4-opacity);
+  }
+}
+
+@keyframes positionImage5 {
+  from {
+    transform: var(--img-5-transform);
+    filter: var(--img-5-filter);
+    opacity: var(--img-5-opacity);
   }
 }
