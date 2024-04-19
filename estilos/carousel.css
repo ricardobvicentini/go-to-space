@@ -241,9 +241,10 @@ body {
       font-size: large;
       pointer-events: auto;
       cursor: pointer;
+      transition: color 200ms ease-in-out, border 200ms ease-in-out;
       &:hover {
-        border: 1px solid #659cdf;
         color: #fff;
+        border: 1px solid #659cdf;
       }
     }
   }
