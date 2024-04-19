@@ -27,6 +27,7 @@ body {
   background-color: #232442;
   color: #fff;
   font-family: 'Poppins', sans-serif;
+  /** Header */
   & header {
     position: fixed;
     width: min(1200 px, 90vw);
@@ -45,13 +46,49 @@ body {
       }
     }
     & nav {
-      & ul {
-        display: grid;
-        grid-template-columns: repeat(3, var(--w-column));
+      display: grid;
+      grid-template-columns: repeat(3, var(--w-column));
+      & a {
+        position: relative;
+        width: fit-content;
+        cursor: pointer;
+        transition: color 200ms ease-in-out;
+        &:hover {
+          color: #69c5fa;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          height: 10%;
+          bottom: 0;
+          left: 0;
+          right: 100%;
+          height: 10%;
+          background-color: #69c5fa;
+          transition: 300ms right ease-in-out;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 100%;
+          height: 10%;
+          background-color: #69c5fa;
+          transition: 300ms left ease-in-out;
+        }
+        &:hover:before,
+        &:focus-within:before {
+          right: 50%;
+        }
+        &:hover:after,
+        &:focus-within:after {
+          left: 50%;
+        }
       }
     }
   }
-
+  /** Carousel */
   & .carousel {
     position: relative;
     background-image: radial-gradient(#2b2e4f, #111126);
