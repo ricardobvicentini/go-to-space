@@ -22,6 +22,7 @@
   /* colors */
   --cl-text-normal: #f3f3f3;
   --cl-text-accent: #69c5fa;
+  /* sizes */
   --w-column: 200px;
 }
 
@@ -130,11 +131,12 @@ body {
           width: 100%;
         }
         &::before {
+          border: 1px solid red;
           content: '';
           position: absolute;
-          background-color: #0b0b0b;
-          width: 80%;
-          height: 80px;
+          background-color: #111126;
+          width: 100%;
+          height: 20%;
           top: 100%;
           border-radius: 100vw;
           filter: blur(50px);
