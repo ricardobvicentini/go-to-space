@@ -53,6 +53,9 @@ body {
         width: fit-content;
         cursor: pointer;
         transition: color 200ms ease-in-out;
+        &.active {
+          color: #69c5fa;
+        }
         &:hover {
           color: #69c5fa;
         }
