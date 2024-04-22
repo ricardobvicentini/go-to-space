@@ -59,12 +59,20 @@ body {
       }
     }
     & nav {
+      position: relative;
       outline: 2px solid red;
       /* display: grid;
       grid-template-columns: repeat(3, var(--w-column)); */
       width: 50%;
       display: flex;
       justify-content: space-between;
+      & i {
+        position: absolute;
+        font-size: 3rem;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+      }
       & a {
         position: relative;
         width: fit-content;
