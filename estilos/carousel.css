@@ -41,13 +41,15 @@ body {
   & header {
     outline: 2px solid red;
     position: fixed;
-    width: min(1200 px, 90vw);
-    /* height: 70px; */
+    width: min(1200px, 90vw);
     left: 50%;
     transform: translateX(-50%);
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr calc(var(--w-column) * 3);
     gap: 10%;
+    align-items: center; */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     z-index: 10;
     & .logo {
@@ -58,9 +60,11 @@ body {
     }
     & nav {
       outline: 2px solid red;
-      display: grid;
-      /* grid-template-columns: repeat(3, var(--w-column)); */
-      grid-template-columns: repeat(auto-fill, var(--w-column));
+      /* display: grid;
+      grid-template-columns: repeat(3, var(--w-column)); */
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
       & a {
         position: relative;
         width: fit-content;
