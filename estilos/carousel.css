@@ -39,7 +39,6 @@ body {
   font-family: 'Poppins', sans-serif;
   /** Header */
   & header {
-    outline: 2px solid red;
     position: fixed;
     width: min(1200px, 90vw);
     left: 50%;
@@ -57,22 +56,29 @@ body {
         width: 100px;
         aspect-ratio: 1;
       }
+      & .logo-mobile {
+        display: none;
+      }
+    }
+    & .menu {
+      color: transparent;
+      display: none;
+      i {
+        display: block;
+        font-size: 3rem;
+        color: var(--cl-text-normal);
+        &:hover,
+        &:focus-visible {
+          color: var(--cl-text-accent);
+        }
+      }
     }
     & nav {
-      position: relative;
-      outline: 2px solid red;
       /* display: grid;
       grid-template-columns: repeat(3, var(--w-column)); */
       width: 50%;
       display: flex;
       justify-content: space-between;
-      & i {
-        position: absolute;
-        font-size: 3rem;
-        top: 50%;
-        left: 50%;
-        translate: -50% -50%;
-      }
       & a {
         position: relative;
         width: fit-content;
@@ -478,6 +484,48 @@ body {
     }
     & .arrows {
       width: min(1200px, 80vw);
+    }
+  }
+}
+
+@media screen and (width < 31.25em) {
+  body {
+    & header {
+      width: min(1200px, 100vw);
+      top: -40vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      place-items: center;
+      background-color: #f3f3f348;
+      backdrop-filter: blur(15px);
+      border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      overflow: hidden;
+      & .logo {
+        & .logo-desk {
+          display: none;
+        }
+        & .logo-mobile {
+          display: block;
+        }
+      }
+      & .menu {
+        display: block;
+      }
+      & nav {
+        width: 90%;
+        height: 40vh;
+        height: 40svh;
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        border: 2px solid blue;
+        flex-direction: column;
+        justify-content: space-evenly;
+        & a {
+          font-size: 2rem;
+        }
+      }
     }
   }
 }
