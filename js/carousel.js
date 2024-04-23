@@ -1,21 +1,18 @@
 'use strict';
 
+const body = document.getElementsByTagName('body');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.list .item');
-const header = document.getElementsByTagName('header');
-const menuBtn = document.querySelector('.menu i');
+const headerMob = document.querySelector('.header-mobile');
+const menuBtn = document.querySelector('.menu');
 let imgWrapper = document.querySelector('.images-wrapper');
 let images = document.querySelectorAll('.helmet-img');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
 let autoPlay;
-
-menuBtn.addEventListener('click', () => {
-  header.classList.toggle('show');
-});
 
 /* Slider function */
 const setSlider = () => {
@@ -41,18 +38,17 @@ const showImage = (direction) => {
     imgWrapper.prepend(images[lastPosition]);
     imgWrapper.classList.add('prev');
   }
-  /* startAutoPlay(); */
+  startAutoPlay();
 };
 
 /* Autoplay function */
-
 const startAutoPlay = () => {
   clearInterval(autoPlay);
   autoPlay = setInterval(() => {
     nextBtn.click();
   }, 5000);
 };
-/* startAutoPlay(); */
+startAutoPlay();
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;
@@ -72,7 +68,15 @@ prevBtn.onclick = () => {
 };
 
 /* Menu function */
-
-/* menuBtn.onclick = () => {
-  document.getElementsByTagName('header').classList.toggle('show');
-}; */
+menuBtn.onclick = () => {
+  let icons = menuBtn.querySelectorAll('.bx');
+  icons.forEach((icon) => {
+    icon.classList.toggle('hidden');
+  });
+  headerMob.classList.toggle('show');
+  if (headerMob.classList.contains('show')) {
+    clearInterval(autoPlay);
+  } else {
+    startAutoPlay();
+  }
+};
