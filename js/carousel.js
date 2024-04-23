@@ -4,12 +4,18 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const carousel = document.querySelector('.carousel');
 const items = carousel.querySelectorAll('.list .item');
+const header = document.getElementsByTagName('header');
+const menuBtn = document.querySelector('.menu i');
 let imgWrapper = document.querySelector('.images-wrapper');
 let images = document.querySelectorAll('.helmet-img');
 let active = 0;
 let firstPosition = 0;
 let lastPosition = items.length - 1;
 let autoPlay;
+
+menuBtn.addEventListener('click', () => {
+  header.classList.toggle('show');
+});
 
 /* Slider function */
 const setSlider = () => {
@@ -64,3 +70,9 @@ prevBtn.onclick = () => {
   setSlider();
   showImage('prev');
 };
+
+/* Menu function */
+
+/* menuBtn.onclick = () => {
+  document.getElementsByTagName('header').classList.toggle('show');
+}; */

@@ -25,10 +25,10 @@
   /* sizes */
   --w-column: 200px;
   /* font */
-  --fs-helname: clamp(4rem, 3.3084112149532707rem + 2.990654205607477vw, 6rem);
+  --fs-helname: clamp(3rem, 1.9626168224299065rem + 4.4859813084112155vw, 6rem);
   --fs-description: clamp(
-    1rem,
-    0.9481308411214954rem + 0.2242990654205606vw,
+    0.8rem,
+    0.6789719626168225rem + 0.5233644859813082vw,
     1.15rem
   );
 }
@@ -70,6 +70,7 @@ body {
         display: block;
         font-size: 3rem;
         color: var(--cl-text-normal);
+        cursor: pointer;
         &:hover,
         &:focus-visible {
           color: var(--cl-text-accent);
@@ -481,6 +482,9 @@ body {
             justify-content: end;
             align-items: center;
             padding-bottom: 100px;
+            & h2 {
+              -webkit-text-stroke: 2px #0b0b0b;
+            }
             & .description {
               text-align: center;
             }
@@ -488,7 +492,7 @@ body {
         }
       }
       & .images-wrapper .helmet-img {
-        width: clamp(300px, 35%, 400px);
+        width: clamp(220px, 35%, 400px);
         /* width: 300px; */
         top: 40%;
         left: 50%;
@@ -506,7 +510,6 @@ body {
     & header {
       width: min(1200px, 100vw);
       top: -40vh;
-      /* top: -100%; */
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
@@ -516,6 +519,7 @@ body {
       border-bottom-left-radius: 100px;
       border-bottom-right-radius: 100px;
       animation: fade-in-mobile 600ms ease-in-out forwards;
+      transition: transform 500ms ease-in-out;
       & .logo {
         & .logo-desk {
           display: none;
@@ -539,6 +543,10 @@ body {
           font-size: 2rem;
         }
       }
+    }
+    header.show {
+      top: 0;
+      transition: transform 500ms ease-in-out;
     }
   }
 
