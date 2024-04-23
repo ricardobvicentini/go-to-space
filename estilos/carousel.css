@@ -40,7 +40,7 @@ body {
   /** Header */
   & header {
     position: fixed;
-    width: min(1200px, 90vw);
+    width: min(1200px, 80vw);
     left: 50%;
     transform: translateX(-50%);
     /* display: grid;
@@ -51,6 +51,8 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
+    animation: fade-in-desk 600ms ease-in-out forwards,
+      fade-out-desk 600ms ease-in-out forwards;
     & .logo {
       & img {
         width: 100px;
@@ -63,6 +65,7 @@ body {
     & .menu {
       color: transparent;
       display: none;
+
       i {
         display: block;
         font-size: 3rem;
@@ -83,7 +86,7 @@ body {
         position: relative;
         width: fit-content;
         cursor: pointer;
-        transition: color 200ms ease-in-out;
+        transition: color 200ms ease-in-out, opacity 1000ms ease-in-out;
         &.active {
           color: var(--cl-text-accent);
         }
@@ -122,6 +125,7 @@ body {
       }
     }
   }
+
   /** Carousel */
   & .carousel {
     position: relative;
@@ -452,6 +456,15 @@ body {
   }
 }
 
+@keyframes fade-in-desk {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* Medias */
 @media screen and (width < 56.25em) {
   :root {
@@ -493,6 +506,7 @@ body {
     & header {
       width: min(1200px, 100vw);
       top: -40vh;
+      /* top: -100%; */
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: auto;
@@ -501,7 +515,7 @@ body {
       backdrop-filter: blur(15px);
       border-bottom-left-radius: 100px;
       border-bottom-right-radius: 100px;
-      overflow: hidden;
+      animation: fade-in-mobile 600ms ease-in-out forwards;
       & .logo {
         & .logo-desk {
           display: none;
@@ -519,13 +533,30 @@ body {
         height: 40svh;
         grid-column: 1/-1;
         grid-row: 1/2;
-        border: 2px solid blue;
         flex-direction: column;
         justify-content: space-evenly;
         & a {
           font-size: 2rem;
         }
       }
+    }
+  }
+
+  @keyframes fade-out-desk {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-in-mobile {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
