@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /* Reset */
-
 *,
 *::after,
 *::before {
@@ -40,54 +39,29 @@ body {
   /** Header */
   & header {
     position: fixed;
-    width: min(1200px, 80vw);
+    width: min(1200px, 70vw);
     left: 50%;
     transform: translateX(-50%);
-    /* display: grid;
-    grid-template-columns: 1fr calc(var(--w-column) * 3);
-    gap: 10%;
-    align-items: center; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    animation: fade-in-desk 600ms ease-in-out forwards,
-      fade-out-desk 600ms ease-in-out forwards;
+    transition: color 200ms ease-in-out, opacity 500ms ease-in-out;
     & .logo {
       & img {
         width: 100px;
         aspect-ratio: 1;
       }
-      & .logo-mobile {
-        display: none;
-      }
-    }
-    & .menu {
-      color: transparent;
-      display: none;
-
-      i {
-        display: block;
-        font-size: 3rem;
-        color: var(--cl-text-normal);
-        cursor: pointer;
-        &:hover,
-        &:focus-visible {
-          color: var(--cl-text-accent);
-        }
-      }
     }
     & nav {
-      /* display: grid;
-      grid-template-columns: repeat(3, var(--w-column)); */
-      width: 50%;
+      width: 60%;
       display: flex;
       justify-content: space-between;
       & a {
         position: relative;
         width: fit-content;
         cursor: pointer;
-        transition: color 200ms ease-in-out, opacity 1000ms ease-in-out;
+        transition: color 200ms ease-in-out;
         &.active {
           color: var(--cl-text-accent);
         }
@@ -126,7 +100,56 @@ body {
       }
     }
   }
-
+  /** Header mobile */
+  & .header-mobile {
+    width: min(1200px, 100vw);
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    /* top: 0;
+    left: 0; */
+    /* translate: 0 -100%; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    place-items: center;
+    background-color: #f3f3f348;
+    backdrop-filter: blur(15px);
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out, transform 500ms ease-in-out;
+    & .logo {
+      & .logo-mobile {
+        display: block;
+      }
+    }
+    & .menu {
+      color: transparent;
+      i {
+        display: block;
+        font-size: 3rem;
+        color: var(--cl-text-normal);
+        cursor: pointer;
+        &:hover,
+        &:focus-visible {
+          color: var(--cl-text-accent);
+        }
+      }
+    }
+    & nav {
+      width: 90%;
+      height: 40vh;
+      height: 40svh;
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      flex-direction: column;
+      justify-content: space-evenly;
+      & a {
+        font-size: 2rem;
+      }
+    }
+  }
   /** Carousel */
   & .carousel {
     position: relative;
@@ -378,6 +401,10 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
 /* Keyframes */
 /* Next */
 @keyframes positionImage2 {
@@ -457,15 +484,6 @@ body {
   }
 }
 
-@keyframes fade-in-desk {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /* Medias */
 @media screen and (width < 56.25em) {
   :root {
@@ -508,62 +526,10 @@ body {
 @media screen and (width < 31.25em) {
   body {
     & header {
-      width: min(1200px, 100vw);
-      top: -40vh;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      place-items: center;
-      background-color: #f3f3f348;
-      backdrop-filter: blur(15px);
-      border-bottom-left-radius: 100px;
-      border-bottom-right-radius: 100px;
-      animation: fade-in-mobile 600ms ease-in-out forwards;
-      transition: transform 500ms ease-in-out;
-      & .logo {
-        & .logo-desk {
-          display: none;
-        }
-        & .logo-mobile {
-          display: block;
-        }
-      }
-      & .menu {
-        display: block;
-      }
-      & nav {
-        width: 90%;
-        height: 40vh;
-        height: 40svh;
-        grid-column: 1/-1;
-        grid-row: 1/2;
-        flex-direction: column;
-        justify-content: space-evenly;
-        & a {
-          font-size: 2rem;
-        }
-      }
-    }
-    header.show {
-      top: 0;
-      transition: transform 500ms ease-in-out;
-    }
-  }
-
-  @keyframes fade-out-desk {
-    from {
-      opacity: 1;
-    }
-    to {
       opacity: 0;
     }
-  }
-
-  @keyframes fade-in-mobile {
-    from {
-      opacity: 0;
-    }
-    to {
+    & .header-mobile {
+      transform: translate(-50%, -40vh);
       opacity: 1;
     }
   }
