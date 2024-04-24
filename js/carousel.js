@@ -48,7 +48,7 @@ const showImage = (direction) => {
     nextBtn.click();
   }, 5000);
 }; */
-startAutoPlay();
+/* startAutoPlay(); */
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;

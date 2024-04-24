@@ -267,6 +267,14 @@ body {
           grid-template-rows: var(--_row-height);
           gap: 20px;
           & button {
+            --_transition-speed: 200ms;
+            --_hover-opacity: 0.4;
+            --_pressed-opacity: 0.15;
+            --_hover-blur: 5px;
+            --_pressed-blur: 10px;
+            --_hover-offset: 0.4rem;
+            --_pressed-offset: 0.25rem;
+
             position: relative;
             border-radius: 30px;
             font-family: 'Poppins', sans-serif;
@@ -277,10 +285,14 @@ body {
             background-color: transparent;
             & span {
               display: block;
-              background-color: coral;
+              background-color: hsl(0 0% 100% / 0);
+              backdrop-filter: blur(0px);
               padding-block: calc(var(--_row-height) / 4);
               border-radius: inherit;
-              transition: translate 200ms;
+              transition: background-color var(--_transition-speed),
+                backdrop-filter var(--_transition-speed),
+                font-weight var(--_transition-speed),
+                translate var(--_transition-speed);
             }
             &::after {
               content: '';
@@ -289,15 +301,34 @@ body {
               border-radius: inherit;
               background-color: var(--_surface);
               z-index: -1;
-              transition: translate 200ms;
+              transition: scale var(--_transition-speed),
+                translate var(--_transition-speed);
             }
             &:hover,
             &:focus-visible {
               & span {
-                translate: 0 -0.5rem;
+                font-weight: bolder;
+
+                background-color: hsl(0 0% 100% / var(--_hover-opacity));
+                backdrop-filter: blur(var(--_hover-blur));
+                translate: 0 calc(var(--_hover-offset) * -1);
               }
               &::after {
-                translate: 0 0.65rem;
+                scale: 0.9;
+                translate: 0 0.55rem;
+              }
+            }
+            &:active {
+              & span {
+                font-weight: normal;
+                outline: 1px solid var(--_surface);
+                background-color: hsl(0 0% 100% / var(--_pressed-opacity));
+                backdrop-filter: blur(var(--_pressed-blur));
+                translate: 0 calc(var(--_pressed-offset) * -1);
+              }
+              &::after {
+                scale: 0.85;
+                translate: 0 0.55rem;
               }
             }
             &:nth-child(1) {
