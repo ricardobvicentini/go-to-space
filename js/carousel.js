@@ -42,12 +42,12 @@ const showImage = (direction) => {
 };
 
 /* Autoplay function */
-const startAutoPlay = () => {
+/* const startAutoPlay = () => {
   clearInterval(autoPlay);
   autoPlay = setInterval(() => {
     nextBtn.click();
   }, 5000);
-};
+}; */
 startAutoPlay();
 
 nextBtn.onclick = () => {

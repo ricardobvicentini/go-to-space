@@ -21,6 +21,8 @@
   /* colors */
   --cl-text-normal: #f3f3f3;
   --cl-text-accent: #69c5fa;
+  --btn-1-surface: #69c5fa;
+  --btn-2-surface: #f3f3f3;
   /* sizes */
   --w-column: 200px;
   /* font */
@@ -259,29 +261,50 @@ body {
           }
         }
         & .more {
+          --_row-height: 40px;
           display: grid;
           grid-template-columns: repeat(2, 120px);
-          grid-template-rows: 35px;
+          grid-template-rows: var(--_row-height);
           gap: 20px;
           & button {
+            position: relative;
             border-radius: 30px;
             font-family: 'Poppins', sans-serif;
             text-transform: uppercase;
-            color: var(--cl-text-normal);
-            background-color: transparent;
+            color: #232442;
             border: none;
+            /* background-color: var(--_surface); */
+            background-color: transparent;
+            & span {
+              display: block;
+              background-color: coral;
+              padding-block: calc(var(--_row-height) / 4);
+              border-radius: inherit;
+              transition: translate 200ms;
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              inset: 0;
+              border-radius: inherit;
+              background-color: var(--_surface);
+              z-index: -1;
+              transition: translate 200ms;
+            }
+            &:hover,
+            &:focus-visible {
+              & span {
+                translate: 0 -0.5rem;
+              }
+              &::after {
+                translate: 0 0.65rem;
+              }
+            }
             &:nth-child(1) {
-              background-image: linear-gradient(
-                to right,
-                var(--cl-text-accent),
-                #00d9ff
-              );
+              --_surface: var(--btn-1-surface);
             }
             &:nth-child(2) {
-              border: 2px solid transparent;
-              background: linear-gradient(#242745, #242745) padding-box,
-                linear-gradient(to right, var(--cl-text-accent), #00d9ff)
-                  border-box;
+              --_surface: var(--btn-2-surface);
             }
           }
         }
