@@ -1,178 +1,148 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go To Space</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/mquery.css">
-    <script src="https://unpkg.com/scrollreveal" defer></script>
-    <script src="js/home.js" defer></script>
-
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
-<body>
-    <!-- NEBULA -->
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="estilos/index.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
     <!-- Header -->
-
     <header>
-        <div class="container">
-            <div class="logo">
-                <a href=""><img src="images/rocket-logo-l.png" alt="Rocket logo" width="120px" height="120px"></a>
-            </div>
-
-        <nav class="slide">
-            <a href="index.html" class="active">Home</a>
-            <a href="discover.html">Discover</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-            <a href="">Carousel</a>
-        </nav>
-
-        <div class="action">
-            <button class="search"><i class='bx bx-search'></i></button>
-        </div>
-        </div>
+      <figure class="logo">
+        <img class="logo-desk" src="images/rocket-logo.png" alt="Logo grey" />
+      </figure>
+      <nav>
+        <a class="active">HOME</a>
+        <a>DISCOVER</a>
+        <a>SHOP</a>
+      </nav>
     </header>
 
-    <!-- Hamburger -->
+    <!-- Header mobile -->
+    <header class="header-mobile">
+      <figure class="logo">
+        <img
+          class="logo-mobile"
+          src="images/rocket-logo-p.png"
+          alt="Logo white"
+        />
+      </figure>
 
-        <div class="hamb">
-            <i id="open" class='bx bx-menu'></i>
-            <i id="close" class='bx bx-x'></i>
-        </div>
+      <div class="menu">
+        <!-- <a class="icon-open" href="#"><i class="bx bx-menu"></i></a>
+        <a class="icon-close hidden" href="#"><i class="bx bx-x"></i></a> -->
+        <i class="bx bx-menu"></i>
+        <i class="bx bx-x hidden"></i>
+      </div>
 
-    <!-- Hero -->
+      <nav>
+        <a class="active">HOME</a>
+        <a>DISCOVER</a>
+        <a>SHOP</a>
+      </nav>
+    </header>
 
-    <section id="nebula" class="hero">
-        <div class="container">
-            <div class="mid">
-                    <h2>Neb</br>ula</h2>
-                <img src="images/helmet1.png" alt="Space Helmet 1">
+    <!-- * Carousel -->
+    <section class="carousel">
+      <!-- * Images -->
+      <div class="images-wrapper">
+        <figure class="helmet-img img-1">
+          <img src="images/helmet1.png" alt="Helmet image" />
+        </figure>
+        <figure class="helmet-img img-2">
+          <img src="images/helmet2.png" alt="Helmet image" />
+        </figure>
+        <figure class="helmet-img img-3">
+          <img src="images/helmet3.png" alt="Helmet image" />
+        </figure>
+        <figure class="helmet-img img-4">
+          <img src="images/helmet4.png" alt="Helmet image" />
+        </figure>
+        <figure class="helmet-img img-5">
+          <img src="images/helmet5.png" alt="Helmet image" />
+        </figure>
+      </div>
+
+      <div class="list">
+        <div class="item active">
+          <div class="content">
+            <h2>Nebula</h2>
+            <p class="description">
+              <span>NebulaVisor</span> <br />Lightweight All-Environment Design
+            </p>
+            <div class="more">
+              <button><span>Add to Cart</span></button>
+              <button><span>See more</span></button>
             </div>
-            <div class="bottom">
-                <a href="">Get one today</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="content">
+            <h2>Galaxy</h2>
+            <p class="description">
+              <span>GalaxyShield</span> <br />Integrated Night Vision Capability
+            </p>
+            <div class="more">
+              <button><span>Add to Cart</span></button>
+              <button><span>See more</span></button>
             </div>
+          </div>
         </div>
 
-        <div class="left-side">
-            <span class="scard">NebulaVisor</span>
+        <div class="item">
+          <div class="content">
+            <h2>Astral</h2>
+            <p class="description">
+              <span>AstralGaze</span> <br />Advanced Solar Protection System
+            </p>
+            <div class="more">
+              <button><span>Add to Cart</span></button>
+              <button><span>See more</span></button>
+            </div>
+          </div>
         </div>
 
-        <div class="right-side">
-            <a href="#nebula" class="show">01</a>
-            <a href="#galaxy">02</a>
-            <a href="#astral">03</a>
-            <a href="#meteor">04</a>
-            <a href="#celest">05</a>
+        <div class="item">
+          <div class="content">
+            <h2>Meteor</h2>
+            <p class="description">
+              <span>MeteorGuard</span> <br />
+              Holographic-enhanced Visibility
+            </p>
+            <div class="more">
+              <button><span>Add to Cart</span></button>
+              <button><span>See more</span></button>
+            </div>
+          </div>
         </div>
+
+        <div class="item">
+          <div class="content">
+            <h2>Celeste</h2>
+            <p class="description">
+              <span>CelestVisage</span> <br />Ergonomic Pressure Equalization
+              Mechanism
+            </p>
+            <div class="more">
+              <button><span>Add to Cart</span></button>
+              <button><span>See more</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="arrows">
+        <button class="prev"><</button>
+        <button class="next">></button>
+      </div>
     </section>
-    
-    <!-- GALAXY -->
-
-    <section id="galaxy" class="hero">
-        <div class="container">
-            <div class="mid">
-                <h2>Gal</br>axy</h2>
-                <img src="images/helmet2.png" alt="Space Helmet 2">
-            </div>
-            <div class="bottom">
-                <a href="">Get one today</a>
-            </div>
-        </div>
-
-        <div class="left-side">
-            <span class="scard">GalaxyShield</span>
-        </div>
-
-        <div class="right-side">
-            <a href="#nebula">01</a>
-            <a href="#galaxy" class="show">02</a>
-            <a href="#astral">03</a>
-            <a href="#meteor">04</a>
-            <a href="#celest">05</a>
-        </div>
-    </section>
-
-    <!-- ASTRAL -->
-    
-    <section id="astral" class="hero">
-        <div class="container">
-            <div class="mid">
-                <h2>Ast</br>ral</h2>
-                <img class="astral-img" src="images/helmet3.png" alt="Space Helmet 3">
-            </div>
-            <div class="bottom">
-                <a href="">Get one today</a>
-            </div>
-        </div>
-    
-        <div class="left-side">
-            <span class="scard">AstralGaze</span>
-        </div>
-    
-        <div class="right-side">
-            <a href="#nebula">01</a>
-            <a href="#galaxy">02</a>
-            <a href="#astral" class="show">03</a>
-            <a href="#meteor">04</a>
-            <a href="#celest">05</a>
-        </div>
-    </section>
-
-        <!-- METEOR -->
-    
-    <section id="meteor" class="hero">
-        <div class="container">
-            <div class="mid">
-                <h2>Met</br>eor</h2>
-                <img class="meteor-img" src="images/helmet4.png" alt="Space Helmet 4">
-            </div>
-            <div class="bottom">
-                <a href="">Get one today</a>
-            </div>
-        </div>
-    
-        <div class="left-side">
-            <span class="scard">MeteorGuard</span>
-        </div>
-    
-        <div class="right-side">
-            <a href="#nebula">01</a>
-            <a href="#galaxy">02</a>
-            <a href="#astral">03</a>
-            <a href="#meteor" class="show">04</a>
-            <a href="#celest">05</a>
-        </div>
-    </section>
-
-    <!-- CELEST -->
-    
-    <section id="celest" class="hero">
-        <div class="container">
-            <div class="mid">
-                <h2>Cel</br>est</h2>
-                <img src="images/helmet5.png" alt="Space Helmet 5">
-            </div>
-            <div class="bottom">
-                <a href="">Get one today</a>
-            </div>
-        </div>
-    
-        <div class="left-side">
-            <span class="scard">CelestVisage</span>
-        </div>
-    
-        <div class="right-side">
-            <a href="#nebula">01</a>
-            <a href="#galaxy">02</a>
-            <a href="#astral">03</a>
-            <a href="#meteor">04</a>
-            <a href="#celest" class="show">05</a>
-        </div>
-    </section>
-
-</body>
+  </body>
 </html>
