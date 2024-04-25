@@ -66,6 +66,12 @@ body {
         transition: color 200ms ease-in-out;
         &.active {
           color: var(--cl-text-accent);
+          &:before {
+            right: 50%;
+          }
+          &:after {
+            left: 50%;
+          }
         }
         &:hover {
           color: var(--cl-text-accent);
@@ -574,7 +580,7 @@ body {
   }
 }
 
-@media screen and (width < 31.25em) {
+@media screen and (width < 40.625em) {
   body {
     & header {
       opacity: 0;
