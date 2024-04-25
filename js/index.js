@@ -42,13 +42,13 @@ const showImage = (direction) => {
 };
 
 /* Autoplay function */
-/* const startAutoPlay = () => {
+const startAutoPlay = () => {
   clearInterval(autoPlay);
   autoPlay = setInterval(() => {
     nextBtn.click();
   }, 5000);
-}; */
-/* startAutoPlay(); */
+};
+startAutoPlay();
 
 nextBtn.onclick = () => {
   active = active + 1 > lastPosition ? 0 : active + 1;
