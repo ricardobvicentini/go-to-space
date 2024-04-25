@@ -583,7 +583,7 @@ body {
 
 @media screen and (width < 40.625em) {
   body {
-    height: 100svh;
+    height: 100dvh;
     & header {
       opacity: 0;
     }
