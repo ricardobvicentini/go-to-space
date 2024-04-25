@@ -35,6 +35,7 @@
 }
 
 body {
+  height: 100dvh;
   background-color: #232442;
   color: var(--cl-text-normal);
   font-family: 'Poppins', sans-serif;
