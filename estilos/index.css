@@ -49,7 +49,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 10;
-    transition: color 200ms ease-in-out, opacity 500ms ease-in-out;
+    transition: color 200ms ease-in-out, opacity 800ms ease-in-out;
     & .logo {
       & img {
         width: 100px;
@@ -120,12 +120,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     place-items: center;
-    background-color: #f3f3f348;
+    background-color: #f3f3f32d;
     backdrop-filter: blur(15px);
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     opacity: 0;
-    transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
+    transition: opacity 700ms ease-in-out, transform 700ms ease-in-out;
     & .logo {
       & .logo-mobile {
         display: block;
@@ -149,7 +149,8 @@ body {
       }
     }
     & nav {
-      width: 90%;
+      border: 1px solid red;
+      width: 80%;
       height: 40vh;
       height: 40svh;
       grid-column: 1/-1;
