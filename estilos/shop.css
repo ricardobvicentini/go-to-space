@@ -41,6 +41,7 @@ body {
   font-family: 'Poppins', sans-serif;
   /** Header */
   & header {
+    border: 1px solid red;
     position: fixed;
     width: min(1200px, 70vw);
     left: 50%;
@@ -163,153 +164,24 @@ body {
   }
 }
 
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-/* img {
-    max-width: 80%;
-    height: auto;
-    display: inline-block;
-}
- */
-.container {
-  width: 80rem;
-  max-width: 95%;
-  margin: 0 auto;
-}
-
-/*  Header */
-
-header {
-  width: 100%;
-  height: auto;
-  padding: 1.2rem 0;
-  background-color: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-}
-
-header .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 50px;
-}
-
-header .container {
-  opacity: 0;
-  filter: blur(15px);
-  transition: all 500ms ease-in;
-}
-
-header .container.pop {
-  filter: blur(0px);
-  opacity: 1;
-}
-
-header .logo {
-  max-width: 8rem;
-}
-
-header .logo img {
-  width: 6.5rem;
-  height: auto;
-}
-
-header nav a {
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: var(--text-color1);
-  margin: 0 12px;
-  padding: 0 8px 5px;
-  position: relative;
-  transition: 300ms ease-in-out;
-}
-
-header nav a:hover,
-header nav a:focus,
-header nav a.active {
-  color: var(--hl-color1);
-}
-
-header nav a:before {
-  content: '';
-  border-bottom: 2px solid var(--hl-color1);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 100%;
-  transition: 300ms right ease-in-out;
-}
-
-header nav a:after {
-  content: '';
-  border-bottom: 2px solid var(--hl-color1);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 100%;
-  transition: 300ms left ease-in-out;
-}
-
-header nav a:hover:before,
-header nav a:focus:before,
-header nav a.active:before {
-  right: 50%;
-}
-
-header nav a:hover:after,
-header nav a:focus:after,
-header nav a.active:after {
-  left: 50%;
-}
-
-header .action button {
-  display: inline-block;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  color: var(--text-color1);
-  cursor: pointer;
-}
-
-header .action button i {
-  font-size: 1.5rem;
-  color: var(--text-color1);
-}
-
-.hamb {
-  width: 2.1rem;
-  height: auto;
-  position: absolute;
-  top: 4.1rem;
-  right: 15%;
-  display: none;
-}
-
-/* Cards */
-
+/** Cards */
 .wrapper {
+  border: 1px solid red;
   position: relative;
   margin: auto;
-  margin-block: 3vh;
+  padding-top: 100px;
   width: 60vw;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  place-items: center;
   gap: 5vh;
-  /* z-index: 1; */
 }
 
 .wrapper .wrapper__card {
-  border: 1px solid red;
   position: relative;
   width: clamp(15rem, 20vw, 16rem);
   height: clamp(18rem, 30vw, 22rem);
