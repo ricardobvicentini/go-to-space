@@ -344,3 +344,19 @@ body {
   border: 1px solid var(--hl-color2);
   border-radius: 5px;
 }
+
+@media screen and (width < 40.625em) {
+  body {
+    height: 100dvh;
+    & header {
+      opacity: 0;
+    }
+    & .header-mobile {
+      transform: translate(-50%, -40vh);
+      opacity: 1;
+      &.show {
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+}
