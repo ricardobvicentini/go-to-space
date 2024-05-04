@@ -14,6 +14,7 @@
   box-sizing: border-box;
   & img {
     display: block;
+    max-width: 100%;
   }
   & a {
     text-decoration: none;
@@ -27,6 +28,8 @@
   --cl-text-accent: #69c5fa;
   --btn-1-surface: #69c5fa;
   --btn-2-surface: #f3f3f3;
+  --hl-color1: #69c5fa;
+  --hl-color2: #00d9ff;
   /* sizes */
   --w-column: 200px;
   /* font */
@@ -45,7 +48,6 @@ body {
   font-family: 'Poppins', sans-serif;
   /** Header */
   & header {
-    border: 1px solid red;
     position: fixed;
     width: min(1200px, 70vw);
     left: 50%;
@@ -170,7 +172,6 @@ body {
 
 /** Cards */
 .wrapper {
-  border: 1px solid red;
   position: relative;
   margin: auto;
   padding-top: 100px;
@@ -204,84 +205,36 @@ body {
 .wrapper-one {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 600ms ease-in forwards,
-    float 4000ms ease-in-out infinite;
+  animation: show 700ms 600ms ease-in forwards;
 }
 
 .wrapper-two {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 800ms ease-in forwards,
-    float 4000ms ease-in-out infinite;
+  animation: show 700ms 800ms ease-in forwards;
 }
 
 .wrapper-three {
   opacity: 0;
   filter: blur(15px);
   grid-column: span 2;
-  animation: show 700ms 1000ms ease-in forwards,
-    float 4000ms ease-in-out infinite;
+  animation: show 700ms 1000ms ease-in forwards;
 }
 
 .wrapper-four {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 1200ms ease-in forwards,
-    float 4000ms ease-in-out infinite;
+  animation: show 700ms 1200ms ease-in forwards;
 }
 
 .wrapper-five {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 1400ms ease-in forwards,
-    float 4000ms ease-in-out infinite;
-}
-
-/* Float */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes show {
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
-.card-one {
-  background: no-repeat url(../images/helmet1.png) center;
-  background-size: 90%;
-}
-
-.card-two {
-  background: no-repeat url(../images/helmet2.png) center;
-  background-size: 90%;
-}
-
-.card-three {
-  background: no-repeat url(../images/helmet3.png) center;
-  background-size: 80%;
-}
-
-.card-four {
-  background: no-repeat url(../images/helmet4.png) center;
-  background-size: 80%;
-}
-
-.card-five {
-  background: no-repeat url(../images/helmet5.png) center;
-  background-size: 90%;
+  animation: show 700ms 1400ms ease-in forwards;
 }
 
 .card__content {
+  position: relative;
   background-color: #69c5fa18;
   display: flex;
   flex-flow: column nowrap;
@@ -300,12 +253,25 @@ body {
   pointer-events: none;
 }
 
+.card__img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 80%;
+  aspect-ratio: 1;
+  animation: float 4000ms ease-in-out infinite;
+}
+
 .card-text {
   --padding: 0.8rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  /* background: linear-gradient(to bottom, hsla(0, 0%, 0%, 0.336), rgba(0, 0, 0, 0.452)); */
+  /* background: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.336),
+    rgba(0, 0, 0, 0.452)
+  ); */
   height: 50%;
   padding: var(--padding);
   transform: translateY(55%);
@@ -366,6 +332,26 @@ body {
   padding-inline: 8px;
   border: 1px solid var(--hl-color2);
   border-radius: 5px;
+}
+
+/* Float */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
 @media screen and (width < 40.625em) {
