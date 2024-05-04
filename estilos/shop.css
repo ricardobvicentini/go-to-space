@@ -15,6 +15,10 @@
   & img {
     display: block;
   }
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 :root {
@@ -200,31 +204,50 @@ body {
 .wrapper-one {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 600ms ease-in forwards;
+  animation: show 700ms 600ms ease-in forwards,
+    float 4000ms ease-in-out infinite;
 }
 
 .wrapper-two {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 800ms ease-in forwards;
+  animation: show 700ms 800ms ease-in forwards,
+    float 4000ms ease-in-out infinite;
 }
 
 .wrapper-three {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 1000ms ease-in forwards;
+  grid-column: span 2;
+  animation: show 700ms 1000ms ease-in forwards,
+    float 4000ms ease-in-out infinite;
 }
 
 .wrapper-four {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 1200ms ease-in forwards;
+  animation: show 700ms 1200ms ease-in forwards,
+    float 4000ms ease-in-out infinite;
 }
 
 .wrapper-five {
   opacity: 0;
   filter: blur(15px);
-  animation: show 700ms 1400ms ease-in forwards;
+  animation: show 700ms 1400ms ease-in forwards,
+    float 4000ms ease-in-out infinite;
+}
+
+/* Float */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes show {
