@@ -173,9 +173,10 @@ body {
 /** Cards */
 .wrapper {
   position: relative;
-  margin: auto;
   padding-top: 100px;
-  width: 60vw;
+  width: min(1200px, 70vw);
+  height: 100vh;
+  margin-inline: auto;
   /* display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly; */
@@ -183,7 +184,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   place-items: center;
-  gap: 5vh;
+  gap: 3vh;
 }
 
 .wrapper .wrapper__card {
@@ -354,7 +355,7 @@ body {
   }
 }
 
-@media screen and (width < 40.625em) {
+@media screen and (width < 46.87em) {
   body {
     height: 100dvh;
     & header {
@@ -365,6 +366,16 @@ body {
       opacity: 1;
       &.show {
         transform: translate(-50%, 0);
+      }
+    }
+    & .wrapper {
+      grid-template-columns: 1fr;
+      & .wrapper__card {
+        width: 16rem;
+        height: 22rem;
+      }
+      & .wrapper-three {
+        grid-column: span 1;
       }
     }
   }
